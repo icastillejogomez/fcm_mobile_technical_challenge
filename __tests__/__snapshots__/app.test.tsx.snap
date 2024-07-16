@@ -302,6 +302,37 @@ exports[`When rendering the app should render the app 1`] = `
               Read the docs to discover what to do next:
             </Text>
           </View>
+          <ViewManagerAdapter_ExpoImage
+            contentFit="contain"
+            contentPosition={
+              {
+                "left": "50%",
+                "top": "50%",
+              }
+            }
+            height={300}
+            nativeViewRef={"[React.ref]"}
+            onError={[Function]}
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            onProgress={[Function]}
+            placeholder={[]}
+            source={
+              [
+                {
+                  "uri": "amsterdam",
+                },
+              ]
+            }
+            style={
+              {
+                "height": 300,
+                "width": "100%",
+              }
+            }
+            transition={null}
+            width="100%"
+          />
           <View
             style={
               {
