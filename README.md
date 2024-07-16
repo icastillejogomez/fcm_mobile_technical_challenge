@@ -68,13 +68,11 @@ npm install
 
 ## Todo list
 
-Write as many things you think are important to complete the challenge. Mark them when you have done them.
-
 ### Setting up the challenge
 
 - [x] Ensure NPM as package manager
 - [x] Upgrade React Native to the latest version
-- [x] Check app runs and test are passing
+- [x] Check app runs and tests are passing
 - [x] Install Expo framework and run the app
 - [x] Install Prettier and Git hooks
 - [x] Update Expo configuration (Typescript, app.json, etc.)
@@ -83,11 +81,32 @@ Write as many things you think are important to complete the challenge. Mark the
 
 ### Implementing the challenge
 
+- [ ] Optimize images
 - [ ] Create project structure
 - [ ] Create app theme hooks
+- [ ] Retrieve data and draw a simply list with cities
 - [ ] Think about missing data in the API and also think about the UI
 - [ ] Draw a low fidelity prototype
+- [ ] Choose a theme palette
+- [ ] Pick a few icons and images for the app
+- [ ] Define the models
+- [ ] Code the contexts (domains and repositories)
 - [ ] Implement the UI MVP (and thinks next steps...)
+
+### Finish the challenge
+
+- [ ] Check app runs on Android and iOS
+- [ ] Generate a production build
+- [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
+- [ ] Check docs are updated
+
+### Nice to implement
+
+- [ ] Deep linking
+- [ ] Map view
+- [ ] Animations
+- [ ] Splash screen
+- [ ] Code a few end-to-end tests
 
 ## Explanations about the challenge decisions
 
@@ -106,4 +125,38 @@ Write as many things you think are important to complete the challenge. Mark the
   <summary>Explanation</summary>
   <br />
   Hexagonal architecture is a software design pattern that helps to organize code into smaller, more manageable modules. It is based on the idea of dividing a system into discrete, independent modules that communicate with each other through well-defined interfaces. Each module has a clear responsibility and is responsible for a specific part of the system. This helps to keep the code modular and easier to understand and maintain.
+</details>
+
+### Why "value objects"?
+
+<details>
+  <summary>Explanation</summary>
+  <br />
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  ```typescript
+  class City {
+    ...
+    private readonly name: CityName // <-- Why CityName instead of simple string type?
+    ...
+
+
+    ...
+  }
+
+  class CityName extends StringValueObject {
+    constructor(name: string) {
+      super(name)
+      this.ensureCityNameIsNonEmpty()
+    }
+
+    private ensureCityNameIsNonEmpty(): void {
+      const value = this.getValue()
+      if (value.length === 0) {
+        throw new Error('City name cannot be empty')
+      }
+    }
+  }
+  ```
 </details>
