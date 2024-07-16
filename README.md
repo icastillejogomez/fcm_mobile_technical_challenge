@@ -1,5 +1,24 @@
 # FCM Mobile Technical Challenge
 
+## Table of contents
+
+* [Table of contents](#table-of-contents)
+* [Challenge instructions](#challenge-instructions)
+* [How to run the app?](#how-to-run-the-app-)
+* [Git hooks](#git-hooks)
+  + [On commit](#on-commit)
+  + [On push](#on-push)
+* [Todo list](#todo-list)
+  + [Setting up the challenge](#setting-up-the-challenge)
+  + [Implementing the challenge](#implementing-the-challenge)
+  + [Finish the challenge](#finish-the-challenge)
+  + [Nice to implement](#nice-to-implement)
+* [Explanations about the challenge decisions](#explanations-about-the-challenge-decisions)
+  + [Why Expo?](#why-expo-)
+  + [Why native-components wrapping?](#why-native-components-wrapping-)
+  + [Why hexagonal architecture?](#why-hexagonal-architecture-)
+  + [Why "value objects"?](#why--value-objects--)
+
 
 ## Challenge instructions
 
@@ -65,6 +84,68 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 npm install
 ```
 
+## Git hooks
+
+### On commit
+
+Every time you commit your code, the following commands will be executed:
+
+```bash
+npm run lint
+npm run check-types
+```
+See file here [here](/.husky/pre-commit)
+
+```bash
+$ git commit -m "Your commit message" -m "Your commit description"
+
+
+> fcmtravelguide@0.0.1 lint
+> expo lint
+
+> npx eslint .
+
+> fcmtravelguide@0.0.1 check-types
+> tsc --noEmit
+
+[master 743aff0] docs: Add why native-components wrapping?" section
+ 1 file changed, 45 insertions(+)
+```
+
+### On push
+
+Every time you push your code, the following commands will be executed:
+
+```bash
+npm run test
+```
+See file here [here](/.husky/pre-push)
+
+```bash
+$ git push origin master
+
+> fcmtravelguide@0.0.1 test
+> jest
+
+ PASS  __tests__/app.test.tsx
+  When rendering the app
+    ✓ should render the app (222 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   1 passed, 1 total
+Time:        0.841 s, estimated 1 s
+Ran all test suites.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.49 KiB | 1.49 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
+   d6251f4..743aff0  master -> master
+```
 
 ## Todo list
 
@@ -100,6 +181,7 @@ npm install
 - [ ] Generate a production build
 - [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
 - [ ] Check docs are updated
+- [ ] Finish Table of contents
 
 ### Nice to implement
 
