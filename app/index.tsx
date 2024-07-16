@@ -7,6 +7,7 @@
 
 import React from 'react'
 import type { PropsWithChildren } from 'react'
+import { Image } from 'expo-image'
 import {
   SafeAreaView,
   ScrollView,
@@ -58,6 +59,8 @@ function Section({ children, title }: SectionProps): JSX.Element {
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
 
+  const image = isDarkMode ? 'london' : 'amsterdam'
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   }
@@ -85,6 +88,7 @@ function App(): JSX.Element {
             <DebugInstructions />
           </Section>
           <Section title="Learn More">Read the docs to discover what to do next:</Section>
+          <Image source={image} style={{ width: '100%', height: 300 }} contentFit="contain" />
           <LearnMoreLinks />
         </View>
       </ScrollView>
