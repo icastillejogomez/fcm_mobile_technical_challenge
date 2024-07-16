@@ -82,6 +82,7 @@ npm install
 ### Implementing the challenge
 
 - [ ] Optimize images
+- [ ] Wrap native components
 - [ ] Create project structure
 - [ ] Create app theme hooks
 - [ ] Retrieve data and draw a simply list with cities
@@ -118,6 +119,50 @@ npm install
   Expo is a React Native framework that allows you to build native iOS and Android apps using JavaScript and React. It is a great tool for building cross-platform apps and it is easy to use. It also has a lot of community support and a lot of plugins that can be used to extend the functionality of the framework. Eventhough in the past was a risky choice, nowadays is worth it. With Expo we can spend time on the business logic and what users want and not on the platform specifics.
 </details>
 
+### Why native-components wrapping?
+
+<details>
+  <summary>Explanation</summary>
+  <br />
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <br />
+
+  ```typescript
+  import { Text, StyleSheet } from 'react-native'
+  import type { TextProps } from 'react-native'
+
+  export type FMCTextVariant = 'default' | 'inherit' | 'title' | 'caption'
+  export type FMCTextWeight = 'normal' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900'
+  export type FMCTextColor = 'default' | 'inherit' | 'primary' | 'secondary' | 'tertiary' | 'error' | 'warning' | 'success' | 'info'
+
+  export type FMCTextProps = TextProps & {
+    variant?: FMCTextVariant
+    weight?: FMCTextWeight
+    color?: FMCTextColor
+    size?: FMCTextSize
+  }
+
+  export const FMCText = (props: FMCTextProps) => {
+    const { variant = 'default', weight = 'normal', color = 'default', size = 'medium', ...rest } = props
+
+    return (
+      <Text
+        {...rest}
+        style={[
+          {
+            fontWeight: weight,
+            color: color,
+            fontSize: size,
+          },
+          rest.style,
+        ]}
+      />
+    )
+  }
+
+  const styles = StyleSheet.create({})
+  ```
+</details>
 
 ### Why hexagonal architecture?
 
