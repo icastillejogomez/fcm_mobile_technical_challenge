@@ -163,9 +163,11 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 ### Implementing the challenge
 
 - [x] Optimize images
-- [ ] Wrap native components
 - [ ] Create project structure
+- [ ] Create i18n dictionaries
+- [ ] Wrap native components
 - [ ] Create app theme hooks
+- [ ] Create i18n hook
 - [ ] Retrieve data and draw a simply list with cities
 - [ ] Think about missing data in the API and also think about the UI
 - [ ] Draw a low fidelity prototype
