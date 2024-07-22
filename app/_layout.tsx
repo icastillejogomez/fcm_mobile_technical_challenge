@@ -3,6 +3,7 @@ import { Slot } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import * as Font from 'expo-font'
 import { View } from 'react-native'
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync()
@@ -19,6 +20,11 @@ function isAppReady(readyState: ReadyState): boolean {
   return readyState.fontsLoaded
 }
 
+const apolloClient = new ApolloClient({
+  uri: 'http://localhost:3000/',
+  cache: new InMemoryCache(),
+})
+
 const FCMTravelGuideAppLayout = () => {
   // Declare hooks
   const [readyState, setReadyState] = useState<ReadyState>(initialReadyState)
@@ -28,8 +34,8 @@ const FCMTravelGuideAppLayout = () => {
       'SpaceMono-Regular': require('../assets/fonts/SpaceMono-Regular.ttf'),
     })
 
-    // wait 5 seconds
-    await new Promise((resolve) => setTimeout(resolve, 1000 * 5))
+    // wait 1 second
+    await new Promise((resolve) => setTimeout(resolve, 1000 * 1))
   }, [])
 
   const hideSplashScreen = useCallback(async () => {
@@ -43,13 +49,19 @@ const FCMTravelGuideAppLayout = () => {
   }, [loadFonts])
 
   if (!isAppReady(readyState)) {
-    return <Slot />
+    return (
+      <ApolloProvider client={apolloClient}>
+        <Slot />
+      </ApolloProvider>
+    )
   }
 
   return (
-    <View style={{ flex: 1 }} onLayout={hideSplashScreen}>
-      <Slot />
-    </View>
+    <ApolloProvider client={apolloClient}>
+      <View style={{ flex: 1 }} onLayout={hideSplashScreen}>
+        <Slot />
+      </View>
+    </ApolloProvider>
   )
 }
 

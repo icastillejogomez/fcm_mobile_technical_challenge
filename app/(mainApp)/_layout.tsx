@@ -5,7 +5,7 @@ import { Tabs } from 'expo-router'
 export default function MainAppLayout() {
   return (
     <Tabs>
-      <Tabs.Screen name="cities" />
+      <Tabs.Screen name="places" />
       <Tabs.Screen name="bookings" />
       <Tabs.Screen name="bookmarks" />
       <Tabs.Screen name="profile" />
