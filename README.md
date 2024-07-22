@@ -163,7 +163,7 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 ### Implementing the challenge
 
 - [x] Optimize images
-- [ ] Create project structure
+- [x] Create project structure
 - [ ] Create i18n dictionaries
 - [ ] Wrap native components
 - [ ] Create app theme hooks
