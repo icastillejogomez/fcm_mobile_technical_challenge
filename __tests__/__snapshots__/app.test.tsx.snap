@@ -87,14 +87,12 @@ exports[`When rendering the app should render the app 1`] = `
             <View
               style={
                 {
-                  "alignItems": "center",
                   "flex": 1,
-                  "justifyContent": "center",
                 }
               }
             >
               <Text>
-                CitiesScreen
+                Loading...
               </Text>
             </View>
           </View>
@@ -202,7 +200,7 @@ exports[`When rendering the app should render the app 1`] = `
                       }
                     }
                   >
-                    cities
+                    places
                   </Text>
                 </View>
                 <View
@@ -271,7 +269,7 @@ exports[`When rendering the app should render the app 1`] = `
         }
       >
         <View
-          accessibilityLabel="cities, tab, 1 of 4"
+          accessibilityLabel="places, tab, 1 of 4"
           accessibilityRole="button"
           accessibilityState={
             {
@@ -423,7 +421,7 @@ exports[`When rendering the app should render the app 1`] = `
               ]
             }
           >
-            cities
+            places
           </Text>
         </View>
         <View
