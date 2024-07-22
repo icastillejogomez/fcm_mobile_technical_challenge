@@ -9,8 +9,8 @@ describe('When rendering the app', () => {
   it('should render the app', async () => {
     const app = renderRouter()
 
-    expect(screen).toHavePathname('/')
-    app.getByText('Step One')
+    expect(screen).toHavePathname('/cities')
+    app.getByText('CitiesScreen')
     expect(screen).toMatchSnapshot()
   })
 })

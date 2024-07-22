@@ -25,7 +25,11 @@
     },
     "plugins": [
       "expo-router",
-      "expo-font",
+      [
+        "expo-font",{
+          "font": ["assets/fonts/SpaceMono-Regular.ttf"]
+        }
+      ],
       [
         "expo-asset",
         {
