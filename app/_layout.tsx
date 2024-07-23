@@ -1,9 +1,10 @@
-import { useCallback, useEffect, useState } from 'react'
+import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react'
 import { Slot } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import * as Font from 'expo-font'
 import { View } from 'react-native'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync()
@@ -48,20 +49,28 @@ const FCMTravelGuideAppLayout = () => {
     })
   }, [loadFonts])
 
+  const Wrappers: FC<PropsWithChildren> = (props) => {
+    return (
+      <GestureHandlerRootView>
+        <ApolloProvider client={apolloClient}>{props.children}</ApolloProvider>
+      </GestureHandlerRootView>
+    )
+  }
+
   if (!isAppReady(readyState)) {
     return (
-      <ApolloProvider client={apolloClient}>
+      <Wrappers>
         <Slot />
-      </ApolloProvider>
+      </Wrappers>
     )
   }
 
   return (
-    <ApolloProvider client={apolloClient}>
+    <Wrappers>
       <View style={{ flex: 1 }} onLayout={hideSplashScreen}>
         <Slot />
       </View>
-    </ApolloProvider>
+    </Wrappers>
   )
 }
 
