@@ -5,6 +5,7 @@ import * as Font from 'expo-font'
 import { View } from 'react-native'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { StatusBar } from 'expo-status-bar'
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync()
@@ -51,9 +52,12 @@ const FCMTravelGuideAppLayout = () => {
 
   const Wrappers: FC<PropsWithChildren> = (props) => {
     return (
-      <GestureHandlerRootView>
-        <ApolloProvider client={apolloClient}>{props.children}</ApolloProvider>
-      </GestureHandlerRootView>
+      <>
+        <StatusBar style="auto" />
+        <GestureHandlerRootView>
+          <ApolloProvider client={apolloClient}>{props.children}</ApolloProvider>
+        </GestureHandlerRootView>
+      </>
     )
   }
 
