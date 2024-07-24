@@ -16,7 +16,7 @@ export const darkPalette: FCMPalette = {
   },
   background: {
     primary: '#161622',
-    header: '#fff',
+    header: '#161622',
   },
   tabBar: {
     background: '#fff',
