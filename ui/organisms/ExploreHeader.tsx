@@ -5,19 +5,54 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useThemePalette, useThemeSpacing } from '@/hooks'
 import { SearchInput } from '../molecules'
 import { SearchFilterButton } from '../atoms'
+import { Image } from 'expo-image'
 
-// Create an array with ten random places types
 const placeTypes = [
-  'Restaurant',
-  'Monument',
-  'Museum',
-  'Park',
-  'Beach',
-  'Shopping',
-  'Hotel',
-  'Bar',
-  'Nightlife',
-  'Other',
+  {
+    label: 'Beach',
+    icon: require('../../assets/icons/beach.png'),
+    key: 'beach',
+  },
+  {
+    label: 'Car rental',
+    icon: require('../../assets/icons/car-rental.png'),
+    key: 'car-rental',
+  },
+  {
+    label: 'Restaurants',
+    icon: require('../../assets/icons/dining-table.png'),
+    key: 'restaurant',
+  },
+  {
+    label: 'Gas station',
+    icon: require('../../assets/icons/gas-station.png'),
+    key: 'gas-station',
+  },
+  {
+    label: 'Hospital',
+    icon: require('../../assets/icons/hospital.png'),
+    key: 'hospital',
+  },
+  {
+    label: 'Park',
+    icon: require('../../assets/icons/park.png'),
+    key: 'park',
+  },
+  {
+    label: 'Hotel',
+    icon: require('../../assets/icons/hotel.png'),
+    key: 'hotel',
+  },
+  {
+    label: 'Party',
+    icon: require('../../assets/icons/party.png'),
+    key: 'party',
+  },
+  {
+    label: 'Shopping',
+    icon: require('../../assets/icons/shopping-bag.png'),
+    key: 'shopping-bag',
+  },
 ]
 
 export const ExploreHeader: FC<BottomTabHeaderProps> = (props) => {
@@ -42,15 +77,18 @@ export const ExploreHeader: FC<BottomTabHeaderProps> = (props) => {
       </View>
       <View style={styles.placeTypesSelectorContainer}>
         <ScrollView
-          style={[styles.placeTypesSelector, { paddingHorizontal: spacing.appHorizontalPadding }]}
-          contentContainerStyle={styles.placeTypesScroll}
+          style={[styles.placeTypesSelector]}
+          contentContainerStyle={[
+            styles.placeTypesScroll,
+            { paddingHorizontal: spacing.appHorizontalPadding },
+          ]}
           horizontal
           showsHorizontalScrollIndicator={false}>
           {placeTypes.map((placeType, index) => (
             <View key={index} style={styles.placeType}>
-              <View style={styles.placeTypeImage} />
+              <Image source={placeType.icon} style={styles.placeTypeImage} />
               <Text style={[styles.placeTypeText, { color: palette.text.default }]}>
-                {placeType}
+                {placeType.label}
               </Text>
             </View>
           ))}
@@ -77,7 +115,7 @@ const styles = StyleSheet.create({
     paddingTop: 4,
   },
   placeTypesScroll: {
-    gap: 32,
+    gap: 40,
   },
   placeType: {
     alignItems: 'center',
@@ -87,11 +125,10 @@ const styles = StyleSheet.create({
   },
   placeTypeImage: {
     width: 35,
-    height: 22,
-    backgroundColor: 'grey',
+    height: 35,
   },
   placeTypeText: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '500',
   },
 })
