@@ -170,7 +170,7 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 - [x] Create Header component
 - [x] Create Explore screen Header
 - [ ] Wrap native components
-- [ ] Create BottomTabNavigation component
+- [x] Create BottomTabNavigation component
 - [ ] Create i18n dictionaries and hooks
 - [ ] Think about missing data in the API and also think about the UI
 - [ ] Pick a few icons and images for the app
@@ -181,6 +181,7 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 ### Finish the challenge
 
 - [ ] Divide the Explore Header compontent into smaller components
+- [ ] Divide TabBar component into smaller components
 - [ ] Check app runs on Android and iOS
 - [ ] Generate a production build
 - [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
