@@ -1,5 +1,4 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { Text, View, Image } from 'react-native'
 import { Tabs } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -130,5 +129,3 @@ export default function MainAppLayout() {
     </>
   )
 }
-
-const styles = StyleSheet.create({})
