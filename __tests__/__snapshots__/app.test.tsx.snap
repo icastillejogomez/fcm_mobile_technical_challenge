@@ -689,8 +689,12 @@ exports[`When rendering the app should render the app 1`] = `
         style={
           [
             {
-              "display": "flex",
+              "borderTopWidth": 1,
               "flexDirection": "row",
+            },
+            {
+              "backgroundColor": "#fff",
+              "borderColor": "#C8C8C8",
               "height": 85,
             },
           ]
@@ -752,12 +756,12 @@ exports[`When rendering the app should render the app 1`] = `
                   "width": 20,
                 }
               }
-              tintColor="#673ab7"
+              tintColor="#00de00"
             />
             <Text
               style={
                 {
-                  "color": "#673ab7",
+                  "color": "#11181C",
                   "fontSize": 10,
                   "textAlign": "center",
                 }

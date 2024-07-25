@@ -2,7 +2,7 @@ import { FCMPalette } from '../types'
 
 export const lightPalette: FCMPalette = {
   color: {
-    primary: '#023c69',
+    primary: '#00de00',
     secondary: '#673ab7',
     tertiary: '#f00',
     error: '#f00',
@@ -20,9 +20,10 @@ export const lightPalette: FCMPalette = {
   },
   tabBar: {
     background: '#fff',
+    border: '#C8C8C8',
     label: '#222',
     icon: '#222',
-    labelTint: '#222',
-    iconTint: '#222',
+    labelTint: '#11181C',
+    iconTint: '#00de00',
   },
 }

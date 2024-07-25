@@ -2,8 +2,8 @@ import { FCMPalette } from '../types'
 
 export const darkPalette: FCMPalette = {
   color: {
-    primary: '#023c69',
-    secondary: '#673ab7',
+    primary: '#A0CAFD',
+    secondary: '#BBC7DB',
     tertiary: '#f00',
     error: '#f00',
     warning: '#f00',
@@ -15,14 +15,15 @@ export const darkPalette: FCMPalette = {
     neutral: '#CDCDE0',
   },
   background: {
-    primary: '#161622',
-    header: '#161622',
+    primary: '#1B2232',
+    header: '#1B2232',
   },
   tabBar: {
-    background: '#fff',
-    label: '#222',
-    icon: '#222',
-    labelTint: '#222',
-    iconTint: '#222',
+    background: '#1B2232',
+    border: '#C8C8C8',
+    label: '#BBC7DB',
+    icon: '#BBC7DB',
+    labelTint: '#A0CAFD',
+    iconTint: '#2196F3',
   },
 }

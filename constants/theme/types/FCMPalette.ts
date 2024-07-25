@@ -18,6 +18,7 @@ export type FCMPalette = {
   }
   tabBar: {
     background: string
+    border: string
     label: string
     icon: string
     labelTint: string
