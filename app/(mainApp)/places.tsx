@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, Dimensions } from 'react-native'
-import React, { FC, PropsWithoutRef, useCallback, useMemo, useRef } from 'react'
+import { StyleSheet, Text, View, Dimensions, Platform } from 'react-native'
+import React, { FC, PropsWithoutRef, useCallback, useMemo, useRef, useState } from 'react'
 // import { useQuery, gql } from '@apollo/client'
 import MapView from 'react-native-maps'
 
@@ -36,10 +36,19 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
   // `)
 
   const { height } = Dimensions.get('window')
+  const [showViewMapButton, setShowViewMapButton] = useState(false)
   const bottomSheetRef = useRef<BottomSheet>(null)
   const insets = useSafeAreaInsets()
 
-  const contentHeightOnClose = useMemo(() => 45, [])
+  const contentHeightOnClose = useMemo(
+    () =>
+      Platform.select({
+        ios: 45,
+        android: 60,
+        native: 45,
+      }) ?? 45,
+    [],
+  )
   const snapBottom = useMemo(
     () => insets.bottom + contentHeightOnClose,
     [insets, contentHeightOnClose],
@@ -86,7 +95,8 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
         index={1}
         snapPoints={snapPoints}
         topInset={-snapBottom}
-        footerComponent={ExploreBottomShetViewMapButton}
+        bottomInset={0}
+        footerComponent={showViewMapButton ? ExploreBottomShetViewMapButton : undefined}
         animateOnMount={false}
         animatedPosition={animatedValue}>
         <View style={[styles.contentOnClose, { height: contentHeightOnClose }]}>
@@ -96,6 +106,7 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
           <BottomSheetSectionList
             sections={sections}
             keyExtractor={(i) => i}
+            onScroll={() => setShowViewMapButton(true)}
             contentContainerStyle={styles.sectionList}
             renderSectionHeader={renderSectionHeader}
             showsVerticalScrollIndicator={false}

@@ -16,7 +16,12 @@
     "lint": "expo lint",
     "check": "npm run lint && npm run check-types && npm run test",
     "check-types": "tsc --noEmit",
-    "clean": "rm -fr .expo ios/build ios/Pods",
+    "clean": "npm run clean:expo && npm run clean:ios && npm run clean:android",
+    "clean:all": "npm run clean:deps && npm run clean",
+    "clean:ios": "rm -fr ios/build ios/Pods",
+    "clean:expo": "rm -fr .expo",
+    "clean:android": "rm -fr android/build && pushd android && ./gradlew clean; popd",
+    "clean:deps": "rm -fr node_modules; npm install",
     "graphql": "json-graphql-server db.js",
     "prepare": "husky"
   },

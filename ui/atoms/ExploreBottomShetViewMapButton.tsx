@@ -6,9 +6,11 @@ import { BottomSheetFooter, BottomSheetFooterProps, useBottomSheet } from '@gorh
 import { useThemePalette } from '@/hooks'
 import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated'
 
-type ExploreBottomShetViewMapButtonProps = BottomSheetFooterProps
+type ExploreBottomShetViewMapButtonProps = BottomSheetFooterProps & {}
 
-export const ExploreBottomShetViewMapButton: FC<ExploreBottomShetViewMapButtonProps> = (props) => {
+export const ExploreBottomShetViewMapButton: FC<ExploreBottomShetViewMapButtonProps> = ({
+  ...props
+}) => {
   // Declare hooks
   const { height } = Dimensions.get('window')
   const bottomSheet = useBottomSheet()

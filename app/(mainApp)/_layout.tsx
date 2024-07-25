@@ -25,7 +25,6 @@ export default function MainAppExpoRouterLayout() {
     <>
       <AnimatedContext.Provider value={animatedContextMap}>
         <Tabs
-          safeAreaInsets={{ bottom: 0 }}
           tabBar={(props) => {
             return <TabBar {...props} />
           }}

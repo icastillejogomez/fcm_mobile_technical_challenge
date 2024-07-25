@@ -115,17 +115,17 @@ const styles = StyleSheet.create({
     paddingTop: 4,
   },
   placeTypesScroll: {
-    gap: 40,
+    gap: 32,
   },
   placeType: {
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 10,
+    gap: 4,
     // width: 90,
   },
   placeTypeImage: {
-    width: 35,
-    height: 35,
+    width: 28,
+    height: 28,
   },
   placeTypeText: {
     fontSize: 11,

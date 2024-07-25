@@ -82,6 +82,53 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ```bash
 npm install
+
+# Run Metro bundler with Expo
+npm run start -c
+
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █ ▀▀▄ ███▄█ ▄▄▄▄▄ █
+█ █   █ ███ ▄▄ ▄▄ █ █   █ █
+█ █▄▄▄█ █ ▄▄ █▄██▄█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█ █ ▀ █ █▄█▄▄▄▄▄▄▄█
+█ ▄▄▀█▄▄█   ██ ▄▀█  ▄▄██  █
+█▄▄▀▀█ ▄ █▀█▄█▀█ ▄█▄ ▀▄▄█▄█
+███ ▄ ▀▄█▄▄█▄ ▄█▀█▄ ▄██▀ ▀█
+█▄▄ ▀ ▄▄ ▀  ▀ ▄  ▄█▀▄▄▄█▀▄█
+█▄▄█▄██▄█ █ ██    ▄▄▄  ▀█ █
+█ ▄▄▄▄▄ █▀██▄█▀██ █▄█ ██▀ █
+█ █   █ ████▄ ▄█▄ ▄▄   ▀ ▄█
+█ █▄▄▄█ █ ▄█▀ ▄ █▀██ ▄██▄▄█
+█▄▄▄▄▄▄▄█▄▄▄██▄▄▄▄▄▄▄▄███▄█
+
+› Metro waiting on exp://<your-ip-address>:8081
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Using Expo Go
+› Press s │ switch to development build
+
+› Press a │ open Android
+› Press i │ open iOS simulator
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+```
+
+Now you are ready to run the app on Android and iOS. Take in consideration that in Android could be necessary a Google Maps API key in order to render the map. It's possible than Expo wraps with need if you run the app with it.
+
+You can also run the app in the iOS or Android simulators with the next commands:
+
+```bash
+npm run ios
+
+# or
+
+npm run android
 ```
 
 ## Git hooks
@@ -146,6 +193,16 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
    d6251f4..743aff0  master -> master
 ```
+
+## Known issues
+
+### Show map button
+
+TODO
+
+### Android Safe Area View
+
+TODO
 
 ## Todo list
 

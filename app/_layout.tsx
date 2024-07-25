@@ -6,6 +6,7 @@ import { View } from 'react-native'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { StatusBar } from 'expo-status-bar'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync()
@@ -53,10 +54,12 @@ const FCMTravelGuideAppLayout = () => {
   const Wrappers: FC<PropsWithChildren> = (props) => {
     return (
       <>
-        <GestureHandlerRootView>
-          <StatusBar style="auto" />
-          <ApolloProvider client={apolloClient}>{props.children}</ApolloProvider>
-        </GestureHandlerRootView>
+        <SafeAreaProvider>
+          <GestureHandlerRootView>
+            <StatusBar style="auto" />
+            <ApolloProvider client={apolloClient}>{props.children}</ApolloProvider>
+          </GestureHandlerRootView>
+        </SafeAreaProvider>
       </>
     )
   }
