@@ -1,12 +1,21 @@
-import { Text, View } from 'react-native'
 import React from 'react'
+import { Text, StyleSheet } from 'react-native'
+import { MainApplicationLayout } from '@/ui'
 
 const MessagesScreen = () => {
   return (
-    <View>
+    <MainApplicationLayout style={styles.container}>
       <Text>MessagesScreen</Text>
-    </View>
+    </MainApplicationLayout>
   )
 }
 
 export default MessagesScreen
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})

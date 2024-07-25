@@ -16,6 +16,12 @@ export type FCMPalette = {
     primary: string
     header: string
   }
+  header: {
+    exploreHeader: {
+      border: string
+      indicator: string
+    }
+  }
   tabBar: {
     background: string
     border: string

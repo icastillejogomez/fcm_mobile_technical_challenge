@@ -1,12 +1,33 @@
-import { Text, View } from 'react-native'
-import React from 'react'
+import { useEffect } from 'react'
+import { useNavigation } from 'expo-router'
+import { Text, StyleSheet } from 'react-native'
+import { MainApplicationLayout } from '@/ui'
 
 const BookmarkScreen = () => {
+  // Declare hooks
+  const navigation = useNavigation()
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => {
+        return <Text style={{ color: 'white', textDecorationLine: 'underline' }}>Edit</Text>
+      },
+    })
+  }, [navigation])
+
   return (
-    <View>
+    <MainApplicationLayout style={styles.container}>
       <Text>BookmarkScreen</Text>
-    </View>
+    </MainApplicationLayout>
   )
 }
 
 export default BookmarkScreen
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})

@@ -31,6 +31,13 @@ jest.mock('@gorhom/bottom-sheet', () => {
   }
 })
 
+jest.mock('expo-image', () => {
+  const actualExpoImage = jest.requireActual('expo-image')
+  const { Image } = jest.requireActual('react-native')
+
+  return { ...actualExpoImage, Image }
+})
+
 describe('When rendering the app', () => {
   it('should render the app', async () => {
     const app = renderRouter()

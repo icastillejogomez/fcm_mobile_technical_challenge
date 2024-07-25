@@ -18,9 +18,16 @@ export const darkPalette: FCMPalette = {
     primary: '#1B2232',
     header: '#1B2232',
   },
+  header: {
+    exploreHeader: {
+      border: '#4C4C4C',
+      indicator: '#C8C8C8',
+    },
+  },
   tabBar: {
     background: '#1B2232',
-    border: '#C8C8C8',
+    // light grey border
+    border: '#4C4C4C',
     label: '#BBC7DB',
     icon: '#BBC7DB',
     labelTint: '#A0CAFD',

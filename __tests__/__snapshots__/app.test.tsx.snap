@@ -79,7 +79,9 @@ exports[`When rendering the app should render the app 1`] = `
                     "flex": 1,
                     "flexDirection": "column-reverse",
                   },
-                  undefined,
+                  {
+                    "backgroundColor": "#fff",
+                  },
                 ],
               ]
             }
@@ -658,28 +660,559 @@ exports[`When rendering the app should render the app 1`] = `
             >
               <View
                 style={
-                  {
-                    "backgroundColor": "#fff",
-                    "justifyContent": "center",
-                    "paddingBottom": 16,
-                    "paddingLeft": 0,
-                    "paddingRight": 0,
-                    "paddingTop": 0,
-                  }
+                  [
+                    {
+                      "borderBottomWidth": 1,
+                      "gap": 10,
+                    },
+                    {
+                      "backgroundColor": "#fff",
+                      "borderBottomColor": "#C8C8C8",
+                      "paddingTop": 0,
+                    },
+                  ]
                 }
               >
-                <Text
+                <View
+                  style={
+                    [
+                      {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "gap": 8,
+                      },
+                      {
+                        "paddingHorizontal": 24,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      {
+                        "alignItems": "center",
+                        "borderColor": "grey",
+                        "borderRadius": 32,
+                        "borderWidth": 1,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "gap": 8,
+                        "opacity": 1,
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 8,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        {
+                          "alignItems": "center",
+                          "borderRadius": 18,
+                          "height": 36,
+                          "justifyContent": "center",
+                          "width": 36,
+                        }
+                      }
+                    >
+                      <Image
+                        source={1}
+                        style={
+                          {
+                            "height": 22,
+                            "width": 22,
+                          }
+                        }
+                        tintColor="#11181C"
+                      />
+                    </View>
+                    <View
+                      style={
+                        {
+                          "gap": 4,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "fontSize": 12,
+                              "fontWeight": "600",
+                            },
+                            {
+                              "color": "#11181C",
+                            },
+                          ]
+                        }
+                      >
+                        Where to?
+                      </Text>
+                      <Text
+                        style={
+                          [
+                            {
+                              "fontSize": 10,
+                            },
+                            {
+                              "color": "#687076",
+                            },
+                          ]
+                        }
+                      >
+                        Anywhere · Any week
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={false}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      {
+                        "alignItems": "center",
+                        "borderColor": "grey",
+                        "borderRadius": 20,
+                        "borderWidth": 1,
+                        "height": 40,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "width": 40,
+                      }
+                    }
+                  >
+                    <Image
+                      source={1}
+                      style={
+                        {
+                          "height": 16,
+                          "width": 16,
+                        }
+                      }
+                      tintColor="#687076"
+                    />
+                  </View>
+                </View>
+                <View
                   style={
                     {
-                      "color": "#11181C",
-                      "fontSize": 18,
-                      "fontWeight": "600",
-                      "textAlign": "center",
+                      "paddingBottom": 10,
                     }
                   }
                 >
-                  Explore
-                </Text>
+                  <RCTScrollView
+                    contentContainerStyle={
+                      {
+                        "gap": 32,
+                      }
+                    }
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    style={
+                      [
+                        {
+                          "paddingTop": 4,
+                        },
+                        {
+                          "paddingHorizontal": 24,
+                        },
+                      ]
+                    }
+                  >
+                    <View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Restaurant
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Monument
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Museum
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Park
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Beach
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Shopping
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Hotel
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Bar
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Nightlife
+                        </Text>
+                      </View>
+                      <View
+                        style={
+                          {
+                            "alignItems": "center",
+                            "gap": 10,
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            {
+                              "backgroundColor": "grey",
+                              "height": 22,
+                              "width": 35,
+                            }
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "fontSize": 12,
+                                "fontWeight": "500",
+                              },
+                              {
+                                "color": "#11181C",
+                              },
+                            ]
+                          }
+                        >
+                          Other
+                        </Text>
+                      </View>
+                    </View>
+                  </RCTScrollView>
+                </View>
               </View>
             </View>
           </View>
@@ -695,7 +1228,7 @@ exports[`When rendering the app should render the app 1`] = `
             {
               "backgroundColor": "#fff",
               "borderColor": "#C8C8C8",
-              "height": 85,
+              "height": 100,
             },
           ]
         }
@@ -744,7 +1277,7 @@ exports[`When rendering the app should render the app 1`] = `
                 "gap": 8,
                 "justifyContent": "center",
                 "opacity": 1,
-                "paddingTop": 12,
+                "paddingTop": 4,
               }
             }
           >
@@ -762,7 +1295,8 @@ exports[`When rendering the app should render the app 1`] = `
               style={
                 {
                   "color": "#11181C",
-                  "fontSize": 10,
+                  "fontSize": 11,
+                  "fontWeight": "500",
                   "textAlign": "center",
                 }
               }
@@ -806,7 +1340,7 @@ exports[`When rendering the app should render the app 1`] = `
                 "gap": 8,
                 "justifyContent": "center",
                 "opacity": 1,
-                "paddingTop": 12,
+                "paddingTop": 4,
               }
             }
           >
@@ -824,7 +1358,8 @@ exports[`When rendering the app should render the app 1`] = `
               style={
                 {
                   "color": "#222",
-                  "fontSize": 10,
+                  "fontSize": 11,
+                  "fontWeight": "400",
                   "textAlign": "center",
                 }
               }
@@ -868,7 +1403,7 @@ exports[`When rendering the app should render the app 1`] = `
                 "gap": 8,
                 "justifyContent": "center",
                 "opacity": 1,
-                "paddingTop": 12,
+                "paddingTop": 4,
               }
             }
           >
@@ -886,7 +1421,8 @@ exports[`When rendering the app should render the app 1`] = `
               style={
                 {
                   "color": "#222",
-                  "fontSize": 10,
+                  "fontSize": 11,
+                  "fontWeight": "400",
                   "textAlign": "center",
                 }
               }
@@ -930,7 +1466,7 @@ exports[`When rendering the app should render the app 1`] = `
                 "gap": 8,
                 "justifyContent": "center",
                 "opacity": 1,
-                "paddingTop": 12,
+                "paddingTop": 4,
               }
             }
           >
@@ -948,7 +1484,8 @@ exports[`When rendering the app should render the app 1`] = `
               style={
                 {
                   "color": "#222",
-                  "fontSize": 10,
+                  "fontSize": 11,
+                  "fontWeight": "400",
                   "textAlign": "center",
                 }
               }
@@ -992,7 +1529,7 @@ exports[`When rendering the app should render the app 1`] = `
                 "gap": 8,
                 "justifyContent": "center",
                 "opacity": 1,
-                "paddingTop": 12,
+                "paddingTop": 4,
               }
             }
           >
@@ -1010,7 +1547,8 @@ exports[`When rendering the app should render the app 1`] = `
               style={
                 {
                   "color": "#222",
-                  "fontSize": 10,
+                  "fontSize": 11,
+                  "fontWeight": "400",
                   "textAlign": "center",
                 }
               }

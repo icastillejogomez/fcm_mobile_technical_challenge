@@ -18,6 +18,12 @@ export const lightPalette: FCMPalette = {
     primary: '#fff',
     header: '#fff',
   },
+  header: {
+    exploreHeader: {
+      border: '#C8C8C8',
+      indicator: '#C8C8C8',
+    },
+  },
   tabBar: {
     background: '#fff',
     border: '#C8C8C8',

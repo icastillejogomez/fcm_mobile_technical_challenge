@@ -67,7 +67,8 @@ export const TabBar: FC<BottomTabBarProps & TabBarProps> = (props) => {
                   <Text
                     style={{
                       color: isFocused ? palette.tabBar.labelTint : palette.tabBar.label,
-                      fontSize: 10,
+                      fontSize: 11,
+                      fontWeight: isFocused ? '500' : '400',
                       textAlign: 'center',
                     }}>
                     {Label}
@@ -81,8 +82,6 @@ export const TabBar: FC<BottomTabBarProps & TabBarProps> = (props) => {
     </SafeAreaView>
   )
 }
-
-export default TabBar
 
 const styles = StyleSheet.create({
   container: {
@@ -98,6 +97,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    paddingTop: 12,
+    paddingTop: 4,
   },
 })
