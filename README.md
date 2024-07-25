@@ -164,14 +164,14 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 
 - [x] Optimize images
 - [x] Create project structure
-- [ ] Create i18n dictionaries
+- [x] Retrieve data and draw a simply list with cities
+- [x] Choose a theme palette
+- [x] Create app theme hooks
 - [ ] Wrap native components
-- [ ] Create app theme hooks
-- [ ] Create i18n hook
-- [ ] Retrieve data and draw a simply list with cities
+- [ ] Create Header component
+- [ ] Create BottomTabNavigation component
+- [ ] Create i18n dictionaries and hooks
 - [ ] Think about missing data in the API and also think about the UI
-- [ ] Draw a low fidelity prototype
-- [ ] Choose a theme palette
 - [ ] Pick a few icons and images for the app
 - [ ] Define the models
 - [ ] Code the contexts (domains and repositories)
@@ -182,6 +182,8 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 - [ ] Check app runs on Android and iOS
 - [ ] Generate a production build
 - [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
+- [ ] Offline message
+- [ ] Error snackbar
 - [ ] Check docs are updated
 - [ ] Finish Table of contents
 
