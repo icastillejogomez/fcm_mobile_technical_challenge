@@ -82,7 +82,7 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
       <MapView style={styles.map} />
       <BottomSheet
         ref={bottomSheetRef}
-        index={1}
+        index={0}
         snapPoints={snapPoints}
         topInset={-snapBottom}
         enablePanDownToClose={false}
