@@ -167,8 +167,9 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 - [x] Retrieve data and draw a simply list with cities
 - [x] Choose a theme palette
 - [x] Create app theme hooks
-- [ ] Wrap native components
 - [ ] Create Header component
+- [ ] Create Explore screen Header
+- [ ] Wrap native components
 - [ ] Create BottomTabNavigation component
 - [ ] Create i18n dictionaries and hooks
 - [ ] Think about missing data in the API and also think about the UI
