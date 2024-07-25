@@ -6,11 +6,12 @@ import { ExploreHeader, Header, TabBar } from '@/ui'
 import React, { useMemo, useRef } from 'react'
 import { AnimatedContext } from '@/hooks'
 import { useSharedValue } from 'react-native-reanimated'
+import { appConfig } from '@/constants'
 
 export default function MainAppExpoRouterLayout() {
   const insets = useSafeAreaInsets()
   const palette = useThemePalette()
-  const tabBarHeightAnimatedValue = useRef(useSharedValue(100))
+  const tabBarHeightAnimatedValue = useRef(useSharedValue(appConfig.ui.tabBar.defaultHeight))
   const placesBottomSheetHeightAnimatedValue = useRef(useSharedValue(insets.bottom))
 
   const animatedContextMap = useMemo(() => {
