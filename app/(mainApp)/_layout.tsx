@@ -1,14 +1,14 @@
-import { Text, View, Image } from 'react-native'
+import { Image } from 'expo-image'
 import { Tabs } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useThemePalette } from '@/hooks'
-import { Header, TabBar } from '@/ui'
+import { ExploreHeader, Header, TabBar } from '@/ui'
 
 export default function MainAppExpoRouterLayout() {
   const insets = useSafeAreaInsets()
   const palette = useThemePalette()
-  const tabBarHeight = 85
+  const tabBarHeight = 100
 
   return (
     <>
@@ -19,9 +19,6 @@ export default function MainAppExpoRouterLayout() {
         }}
         sceneContainerStyle={{
           backgroundColor: palette.background.primary,
-        }}
-        screenOptions={{
-          headerShown: true,
         }}>
         <Tabs.Screen
           name="places"
@@ -29,30 +26,7 @@ export default function MainAppExpoRouterLayout() {
             // headerStatusBarHeight: 40,
             headerTitle: 'Explore',
             header: (props) => {
-              return (
-                <View
-                  style={{
-                    backgroundColor: palette.background.header,
-                    paddingTop: insets.top,
-                    paddingBottom: 16,
-                    paddingLeft: insets.left,
-                    paddingRight: insets.right,
-                    justifyContent: 'center',
-                  }}>
-                  <StatusBar style="auto" />
-                  {typeof props.options.headerTitle === 'string' && (
-                    <Text
-                      style={{
-                        color: palette.text.default,
-                        textAlign: 'center',
-                        fontSize: 18,
-                        fontWeight: '600',
-                      }}>
-                      {props.options.headerTitle}
-                    </Text>
-                  )}
-                </View>
-              )
+              return <ExploreHeader {...props} />
             },
             tabBarIcon: ({ color, size }) => {
               return (
