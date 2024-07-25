@@ -80,7 +80,7 @@ export const TabBar: FC<BottomTabBarProps & TabBarProps> = (props) => {
                 {Icon && (
                   <Icon
                     color={isFocused ? palette.tabBar.iconTint : palette.tabBar.icon}
-                    size={20}
+                    size={24}
                     focused={isFocused}
                   />
                 )}

@@ -12,9 +12,9 @@ export const SearchFilterButton: FC<SearchFilterButtonProps> = (props) => {
   return (
     <TouchableOpacity style={styles.container} {...props}>
       <Image
-        source={require('../../assets/icons/search.png')}
+        source={require('../../assets/icons/filter.png')}
         style={styles.icon}
-        tintColor={palette.text.neutral}
+        tintColor={palette.text.default}
       />
     </TouchableOpacity>
   )

@@ -58,7 +58,7 @@ export default function MainAppExpoRouterLayout() {
               tabBarIcon: ({ color, size, focused }) => {
                 return (
                   <Image
-                    source={require('../../assets/icons/bookmark.png')}
+                    source={require('../../assets/icons/heart.png')}
                     style={{ width: size, height: size }}
                     tintColor={color}
                   />
