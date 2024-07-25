@@ -193,8 +193,8 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 ### Nice to implement
 
 - [ ] Deep linking
-- [ ] Map view
-- [ ] Animations
+- [x] Map view
+- [x] Animations
 - [ ] Splash screen
 - [ ] Code a few end-to-end tests
 
