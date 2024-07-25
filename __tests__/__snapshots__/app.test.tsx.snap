@@ -234,7 +234,7 @@ exports[`When rendering the app should render the app 1`] = `
                                 "paddingTop": 16,
                               },
                               {
-                                "paddingBottom": NaN,
+                                "paddingBottom": undefined,
                               },
                             ]
                           }
