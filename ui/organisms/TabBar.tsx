@@ -1,24 +1,45 @@
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
-import React, { FC } from 'react'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import React, { FC, useMemo } from 'react'
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
-import { useThemePalette } from '@/hooks'
+import { usePlacesBottomSheetSharedValue, useThemePalette } from '@/hooks'
+import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
-type TabBarProps = {
-  height: number
-}
+type TabBarProps = {}
 
 export const TabBar: FC<BottomTabBarProps & TabBarProps> = (props) => {
   // Destructure props
-  const { state, descriptors, navigation, height } = props
+  const { state, descriptors, navigation } = props
 
   // Declare hooks
+  const bottomSheetPosition = usePlacesBottomSheetSharedValue()
+  const insets = useSafeAreaInsets()
   const palette = useThemePalette()
 
+  const TOP = useMemo(() => 573, [])
+
+  const animatedStyles = useAnimatedStyle(() => {
+    return {
+      bottom: interpolate(bottomSheetPosition?.value ?? TOP, [-94, TOP], [0, -100]),
+    }
+  }, [insets.bottom])
+
   return (
-    <SafeAreaView
+    <Animated.View
       style={[
         styles.container,
-        { height, borderColor: palette.tabBar.border, backgroundColor: palette.tabBar.background },
+        {
+          paddingLeft: insets.left,
+          paddingRight: insets.right,
+          paddingBottom: insets.bottom,
+        },
+        {
+          height: 100,
+          borderColor: palette.tabBar.border,
+          borderTopWidth: 1,
+          backgroundColor: palette.tabBar.background,
+        },
+        animatedStyles,
       ]}>
       <View style={styles.tabBar}>
         {state.routes.map((route, index) => {
@@ -79,14 +100,18 @@ export const TabBar: FC<BottomTabBarProps & TabBarProps> = (props) => {
           )
         })}
       </View>
-    </SafeAreaView>
+    </Animated.View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    height: 100,
     flexDirection: 'row',
-    borderTopWidth: 1,
+    overflow: 'hidden',
   },
   tabBar: {
     flex: 1,

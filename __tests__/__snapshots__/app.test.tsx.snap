@@ -81,6 +81,7 @@ exports[`When rendering the app should render the app 1`] = `
                   },
                   {
                     "backgroundColor": "#fff",
+                    "position": "relative",
                   },
                 ],
               ]
@@ -128,7 +129,7 @@ exports[`When rendering the app should render the app 1`] = `
                       {
                         "bottom": 0,
                         "overflow": "hidden",
-                        "top": -60,
+                        "top": -45,
                       },
                     ]
                   }
@@ -212,11 +213,9 @@ exports[`When rendering the app should render the app 1`] = `
                             [
                               {
                                 "alignItems": "center",
-                                "justifyContent": "center",
-                                "marginBottom": 10,
                               },
                               {
-                                "height": 60,
+                                "height": 45,
                               },
                             ]
                           }
@@ -227,9 +226,17 @@ exports[`When rendering the app should render the app 1`] = `
                         </View>
                         <View
                           style={
-                            {
-                              "flex": 1,
-                            }
+                            [
+                              {
+                                "flexGrow": 1,
+                              },
+                              {
+                                "paddingTop": 16,
+                              },
+                              {
+                                "paddingBottom": NaN,
+                              },
+                            ]
                           }
                         >
                           <RCTScrollView
@@ -1218,17 +1225,30 @@ exports[`When rendering the app should render the app 1`] = `
           </View>
         </RNSScreen>
       </RNSScreenNavigationContainer>
-      <RCTSafeAreaView
+      <View
         style={
           [
             {
-              "borderTopWidth": 1,
               "flexDirection": "row",
+              "height": 100,
+              "left": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "right": 0,
+            },
+            {
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
             },
             {
               "backgroundColor": "#fff",
               "borderColor": "#C8C8C8",
+              "borderTopWidth": 1,
               "height": 100,
+            },
+            {
+              "bottom": undefined,
             },
           ]
         }
@@ -1557,7 +1577,7 @@ exports[`When rendering the app should render the app 1`] = `
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </View>
 </RNCSafeAreaProvider>

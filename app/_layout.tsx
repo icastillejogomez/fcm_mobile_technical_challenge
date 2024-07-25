@@ -53,8 +53,8 @@ const FCMTravelGuideAppLayout = () => {
   const Wrappers: FC<PropsWithChildren> = (props) => {
     return (
       <>
-        <StatusBar style="auto" />
         <GestureHandlerRootView>
+          <StatusBar style="auto" />
           <ApolloProvider client={apolloClient}>{props.children}</ApolloProvider>
         </GestureHandlerRootView>
       </>

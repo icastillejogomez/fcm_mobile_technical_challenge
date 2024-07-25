@@ -5,7 +5,8 @@ import MapView from 'react-native-maps'
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import BottomSheet, { BottomSheetSectionList } from '@gorhom/bottom-sheet'
-import { useSharedValue } from 'react-native-reanimated'
+import { usePlacesBottomSheetSharedValue } from '@/hooks'
+import { ExploreBottomSheetLayout } from '@/ui'
 
 // type QueryResult = {
 //   allCities: City[]
@@ -38,14 +39,14 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
   const bottomSheetRef = useRef<BottomSheet>(null)
   const insets = useSafeAreaInsets()
 
-  const contentHeightOnClose = useMemo(() => 60, [])
+  const contentHeightOnClose = useMemo(() => 45, [])
   const snapBottom = useMemo(
     () => insets.bottom + contentHeightOnClose,
     [insets, contentHeightOnClose],
   )
   const snapTop = useMemo(() => height - insets.top + snapBottom, [height, insets, snapBottom])
   const snapPoints = useMemo(() => [snapBottom, snapTop], [snapBottom, snapTop])
-  const animatedValue = useSharedValue(snapBottom)
+  const animatedValue = usePlacesBottomSheetSharedValue()
 
   const sections = useMemo(
     () =>
@@ -82,22 +83,22 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
       <MapView style={styles.map} />
       <BottomSheet
         ref={bottomSheetRef}
-        index={0}
+        index={1}
         snapPoints={snapPoints}
         topInset={-snapBottom}
-        enablePanDownToClose={false}
+        animateOnMount={false}
         animatedPosition={animatedValue}>
         <View style={[styles.contentOnClose, { height: contentHeightOnClose }]}>
           <Text>180 places to see</Text>
         </View>
-        <View style={styles.contentOnOpen}>
+        <ExploreBottomSheetLayout>
           <BottomSheetSectionList
             sections={sections}
             keyExtractor={(i) => i}
             renderSectionHeader={renderSectionHeader}
             renderItem={renderItem}
           />
-        </View>
+        </ExploreBottomSheetLayout>
       </BottomSheet>
     </View>
   )
@@ -127,11 +128,6 @@ const styles = StyleSheet.create({
   },
   contentOnClose: {
     alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 10,
-  },
-  contentOnOpen: {
-    flex: 1,
   },
   sectionHeaderContainer: {
     backgroundColor: 'white',
