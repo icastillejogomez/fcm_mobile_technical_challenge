@@ -53,7 +53,7 @@ export default function MainAppExpoRouterLayout() {
             }}
           />
           <Tabs.Screen
-            name="bookmarks"
+            name="wishlist"
             options={{
               tabBarIcon: ({ color, size, focused }) => {
                 return (
@@ -67,8 +67,8 @@ export default function MainAppExpoRouterLayout() {
               header: (props) => {
                 return <Header {...props} />
               },
-              headerTitle: 'Bookmarks',
-              tabBarLabel: 'Bookmarks',
+              headerTitle: 'Wishlist',
+              tabBarLabel: 'Wishlist',
             }}
           />
           <Tabs.Screen

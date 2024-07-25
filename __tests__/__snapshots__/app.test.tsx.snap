@@ -1384,7 +1384,7 @@ exports[`When rendering the app should render the app 1`] = `
                 }
               }
             >
-              Bookmarks
+              Wishlist
             </Text>
           </View>
           <View

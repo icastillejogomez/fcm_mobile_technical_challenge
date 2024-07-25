@@ -3,7 +3,7 @@ import { useNavigation } from 'expo-router'
 import { Text, StyleSheet } from 'react-native'
 import { MainApplicationLayout } from '@/ui'
 
-const BookmarkScreen = () => {
+const WishlistScreen = () => {
   // Declare hooks
   const navigation = useNavigation()
 
@@ -17,12 +17,12 @@ const BookmarkScreen = () => {
 
   return (
     <MainApplicationLayout style={styles.container}>
-      <Text>BookmarkScreen</Text>
+      <Text>WishlistScreen</Text>
     </MainApplicationLayout>
   )
 }
 
-export default BookmarkScreen
+export default WishlistScreen
 
 const styles = StyleSheet.create({
   container: {
