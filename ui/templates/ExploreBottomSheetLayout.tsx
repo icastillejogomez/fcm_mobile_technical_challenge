@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native'
 import React, { FC, PropsWithChildren } from 'react'
 import { useTabBarHeight, useThemeSpacing } from '@/hooks'
 import Animated, { useAnimatedStyle } from 'react-native-reanimated'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 type ExploreBottomSheetLayoutProps = {}
 
@@ -9,6 +10,7 @@ export const ExploreBottomSheetLayout: FC<PropsWithChildren<ExploreBottomSheetLa
   children,
 }) => {
   // Declare hooks
+  const insets = useSafeAreaInsets()
   const spacing = useThemeSpacing()
   const tabBarHeight = useTabBarHeight()
 
@@ -23,6 +25,8 @@ export const ExploreBottomSheetLayout: FC<PropsWithChildren<ExploreBottomSheetLa
       style={[
         styles.container,
         {
+          paddingLeft: insets.left + spacing.appHorizontalPadding / 2,
+          paddingRight: insets.right + spacing.appHorizontalPadding / 2,
           paddingTop: spacing.medium,
         },
         animatedStyles,
