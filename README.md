@@ -173,7 +173,7 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 - [x] Create BottomTabNavigation component
 - [ ] Create i18n dictionaries and hooks
 - [ ] Think about missing data in the API and also think about the UI
-- [ ] Pick a few icons and images for the app
+- [x] Pick a few icons and images for the app
 - [ ] Define the models
 - [ ] Code the contexts (domains and repositories)
 - [ ] Implement the UI MVP (and thinks next steps...)
