@@ -21,6 +21,7 @@ export const lightPalette: FCMPalette = {
   header: {
     exploreHeader: {
       border: '#C8C8C8',
+      indicator: '#C8C8C8',
     },
   },
   tabBar: {

@@ -20,7 +20,8 @@ export const darkPalette: FCMPalette = {
   },
   header: {
     exploreHeader: {
-      border: '#C8C8C8',
+      border: '#4C4C4C',
+      indicator: '#C8C8C8',
     },
   },
   tabBar: {

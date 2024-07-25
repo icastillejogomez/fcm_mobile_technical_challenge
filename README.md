@@ -180,6 +180,7 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 
 ### Finish the challenge
 
+- [ ] Divide the Explore Header compontent into smaller components
 - [ ] Check app runs on Android and iOS
 - [ ] Generate a production build
 - [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
