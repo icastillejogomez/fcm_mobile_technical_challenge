@@ -6,7 +6,7 @@ import MapView from 'react-native-maps'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import BottomSheet, { BottomSheetSectionList } from '@gorhom/bottom-sheet'
 import { usePlacesBottomSheetSharedValue } from '@/hooks'
-import { ExploreBottomSheetLayout } from '@/ui'
+import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton } from '@/ui'
 
 // type QueryResult = {
 //   allCities: City[]
@@ -86,6 +86,7 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
         index={1}
         snapPoints={snapPoints}
         topInset={-snapBottom}
+        footerComponent={ExploreBottomShetViewMapButton}
         animateOnMount={false}
         animatedPosition={animatedValue}>
         <View style={[styles.contentOnClose, { height: contentHeightOnClose }]}>
@@ -95,6 +96,7 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
           <BottomSheetSectionList
             sections={sections}
             keyExtractor={(i) => i}
+            contentContainerStyle={styles.sectionList}
             renderSectionHeader={renderSectionHeader}
             showsVerticalScrollIndicator={false}
             renderItem={renderItem}
@@ -129,6 +131,9 @@ const styles = StyleSheet.create({
   },
   contentOnClose: {
     alignItems: 'center',
+  },
+  sectionList: {
+    paddingBottom: 100,
   },
   sectionHeaderContainer: {
     backgroundColor: 'white',
