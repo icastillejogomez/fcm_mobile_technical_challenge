@@ -3,7 +3,7 @@ import { Tabs } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useThemePalette } from '@/hooks'
-import { TabBar } from '@/ui'
+import { Header, TabBar } from '@/ui'
 
 export default function MainAppLayout() {
   const insets = useSafeAreaInsets()
@@ -17,9 +17,11 @@ export default function MainAppLayout() {
         tabBar={(props) => {
           return <TabBar {...props} height={tabBarHeight} />
         }}
+        sceneContainerStyle={{
+          backgroundColor: palette.background.primary,
+        }}
         screenOptions={{
           headerShown: true,
-          tabBarActiveTintColor: '#f00',
         }}>
         <Tabs.Screen
           name="places"
@@ -52,7 +54,7 @@ export default function MainAppLayout() {
                 </View>
               )
             },
-            tabBarIcon: ({ color, size, focused }) => {
+            tabBarIcon: ({ color, size }) => {
               return (
                 <Image
                   source={require('../../assets/icons/search.png')}
@@ -76,6 +78,10 @@ export default function MainAppLayout() {
                 />
               )
             },
+            header: (props) => {
+              return <Header {...props} />
+            },
+            headerTitle: 'Bookmarks',
             tabBarLabel: 'Bookmarks',
           }}
         />
@@ -91,6 +97,10 @@ export default function MainAppLayout() {
                 />
               )
             },
+            header: (props) => {
+              return <Header {...props} />
+            },
+            headerTitle: 'Bookings',
             tabBarLabel: 'Bookings',
           }}
         />
@@ -106,6 +116,10 @@ export default function MainAppLayout() {
                 />
               )
             },
+            header: (props) => {
+              return <Header {...props} />
+            },
+            headerTitle: 'Messages',
             tabBarLabel: 'Messages',
           }}
         />
@@ -121,6 +135,10 @@ export default function MainAppLayout() {
                 />
               )
             },
+            header: (props) => {
+              return <Header {...props} />
+            },
+            headerTitle: 'Profile',
             tabBarLabel: 'Profile',
           }}
         />

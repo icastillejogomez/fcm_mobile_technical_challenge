@@ -82,8 +82,6 @@ export const TabBar: FC<BottomTabBarProps & TabBarProps> = (props) => {
   )
 }
 
-export default TabBar
-
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',

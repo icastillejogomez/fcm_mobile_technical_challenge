@@ -79,7 +79,9 @@ exports[`When rendering the app should render the app 1`] = `
                     "flex": 1,
                     "flexDirection": "column-reverse",
                   },
-                  undefined,
+                  {
+                    "backgroundColor": "#fff",
+                  },
                 ],
               ]
             }
