@@ -231,6 +231,8 @@ exports[`When rendering the app should render the app 1`] = `
                                 "flexGrow": 1,
                               },
                               {
+                                "paddingLeft": 12,
+                                "paddingRight": 12,
                                 "paddingTop": 16,
                               },
                               {
@@ -406,6 +408,7 @@ exports[`When rendering the app should render the app 1`] = `
                             onScrollEndDrag={[Function]}
                             renderItem={[Function]}
                             scrollEventThrottle={0.0001}
+                            showsVerticalScrollIndicator={false}
                             stickyHeaderIndices={
                               [
                                 0,
@@ -732,7 +735,7 @@ exports[`When rendering the app should render the app 1`] = `
                         "flexDirection": "row",
                         "gap": 8,
                         "opacity": 1,
-                        "paddingHorizontal": 16,
+                        "paddingHorizontal": 8,
                         "paddingVertical": 8,
                       }
                     }
@@ -846,7 +849,7 @@ exports[`When rendering the app should render the app 1`] = `
                           "width": 16,
                         }
                       }
-                      tintColor="#687076"
+                      tintColor="#11181C"
                     />
                   </View>
                 </View>
@@ -1305,8 +1308,8 @@ exports[`When rendering the app should render the app 1`] = `
               source={1}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "height": 24,
+                  "width": 24,
                 }
               }
               tintColor="#00de00"
@@ -1368,8 +1371,8 @@ exports[`When rendering the app should render the app 1`] = `
               source={1}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "height": 24,
+                  "width": 24,
                 }
               }
               tintColor="#222"
@@ -1431,8 +1434,8 @@ exports[`When rendering the app should render the app 1`] = `
               source={1}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "height": 24,
+                  "width": 24,
                 }
               }
               tintColor="#222"
@@ -1494,8 +1497,8 @@ exports[`When rendering the app should render the app 1`] = `
               source={1}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "height": 24,
+                  "width": 24,
                 }
               }
               tintColor="#222"
@@ -1557,8 +1560,8 @@ exports[`When rendering the app should render the app 1`] = `
               source={1}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "height": 24,
+                  "width": 24,
                 }
               }
               tintColor="#222"
