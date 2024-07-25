@@ -168,7 +168,7 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 - [x] Choose a theme palette
 - [x] Create app theme hooks
 - [x] Create Header component
-- [ ] Create Explore screen Header
+- [x] Create Explore screen Header
 - [ ] Wrap native components
 - [ ] Create BottomTabNavigation component
 - [ ] Create i18n dictionaries and hooks
