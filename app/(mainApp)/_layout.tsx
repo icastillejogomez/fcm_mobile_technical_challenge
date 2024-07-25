@@ -28,7 +28,6 @@ export default function MainAppLayout() {
             // headerStatusBarHeight: 40,
             headerTitle: 'Explore',
             header: (props) => {
-              console.log('props', JSON.stringify(props, null, 2))
               return (
                 <View
                   style={{
