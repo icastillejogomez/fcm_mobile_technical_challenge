@@ -1,6 +1,5 @@
 import { Image } from 'expo-image'
 import { Tabs } from 'expo-router'
-import { StatusBar } from 'expo-status-bar'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useThemePalette } from '@/hooks'
 import { ExploreHeader, Header, TabBar } from '@/ui'
@@ -129,7 +128,6 @@ export default function MainAppExpoRouterLayout() {
             }}
           />
         </Tabs>
-        <StatusBar />
       </AnimatedContext.Provider>
     </>
   )
