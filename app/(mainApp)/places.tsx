@@ -96,6 +96,7 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
             sections={sections}
             keyExtractor={(i) => i}
             renderSectionHeader={renderSectionHeader}
+            showsVerticalScrollIndicator={false}
             renderItem={renderItem}
           />
         </ExploreBottomSheetLayout>
