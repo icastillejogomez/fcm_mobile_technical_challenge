@@ -5,7 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useThemePalette } from '@/hooks'
 import { Header, TabBar } from '@/ui'
 
-export default function MainAppLayout() {
+export default function MainAppExpoRouterLayout() {
   const insets = useSafeAreaInsets()
   const palette = useThemePalette()
   const tabBarHeight = 85

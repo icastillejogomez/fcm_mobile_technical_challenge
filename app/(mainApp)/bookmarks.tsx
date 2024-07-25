@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigation } from 'expo-router'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, StyleSheet } from 'react-native'
+import { MainApplicationLayout } from '@/ui'
 
 const BookmarkScreen = () => {
   // Declare hooks
@@ -15,9 +16,9 @@ const BookmarkScreen = () => {
   }, [navigation])
 
   return (
-    <View style={[StyleSheet.absoluteFill, styles.container]}>
+    <MainApplicationLayout style={styles.container}>
       <Text>BookmarkScreen</Text>
-    </View>
+    </MainApplicationLayout>
   )
 }
 
@@ -25,6 +26,7 @@ export default BookmarkScreen
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
