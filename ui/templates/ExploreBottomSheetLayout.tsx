@@ -25,8 +25,8 @@ export const ExploreBottomSheetLayout: FC<PropsWithChildren<ExploreBottomSheetLa
       style={[
         styles.container,
         {
-          paddingLeft: insets.left + spacing.appHorizontalPadding / 2,
-          paddingRight: insets.right + spacing.appHorizontalPadding / 2,
+          paddingLeft: insets.left + spacing.appHorizontalPadding,
+          paddingRight: insets.right + spacing.appHorizontalPadding,
           paddingTop: spacing.medium,
         },
         animatedStyles,
