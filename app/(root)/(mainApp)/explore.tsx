@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Dimensions, Platform } from 'react-native'
-import React, { FC, PropsWithoutRef, useMemo, useRef } from 'react'
+import React, { FC, PropsWithoutRef, useCallback, useMemo, useRef } from 'react'
 import MapView from 'react-native-map-clustering'
 import { Marker } from 'react-native-maps'
 import Animated from 'react-native-reanimated'
@@ -15,7 +15,7 @@ import {
 import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton, MapMarker } from '@/ui'
 import { PlacePrimitives } from '@/contexts/place/domain'
 import PlaceCard from '@/ui/molecules/PlaceCard'
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { appConfig } from '@/constants'
 
@@ -45,6 +45,10 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
   const snapPoints = useMemo(() => [snapBottom, snapTop], [snapBottom, snapTop])
   const animatedValue = usePlacesBottomSheetSharedValue()
 
+  const handlePress = useCallback((place: PlacePrimitives) => {
+    router.navigate(`place/${place.name}`)
+  }, [])
+
   return (
     <View style={styles.container}>
       <Animated.View style={{ marginBottom: tabBarHeight }}>
@@ -56,6 +60,7 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
             places.map((place, index) => (
               <Marker
                 key={index}
+                onPress={() => handlePress(place)}
                 coordinate={{ latitude: place.coordinates[0], longitude: place.coordinates[1] }}
                 title={place.name}
                 description={place.name}>
