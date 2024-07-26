@@ -226,23 +226,23 @@ TODO
 - [x] Create app theme hooks
 - [x] Create Header component
 - [x] Create Explore screen Header
-- [ ] Wrap native components
 - [x] Create BottomTabNavigation component
-- [ ] Create i18n dictionaries and hooks
-- [ ] Think about missing data in the API and also think about the UI
+- [x] Think about missing data in the API and also think about the UI
 - [x] Pick a few icons and images for the app
-- [ ] Define the models
-- [ ] Code the contexts (domains and repositories)
+- [x] Define the models
+- [x] Code the contexts (domains and repositories)
 - [ ] Implement the UI MVP (and thinks next steps...)
+- [ ] Create i18n dictionaries and hooks
+- [ ] Wrap native components
 
 ### Finish the challenge
 
 - [ ] Divide the Explore Header compontent into smaller components
 - [ ] Divide TabBar component into smaller components
-- [ ] Improve the place type selector
+- [x] Improve the place type selector
 - [ ] Snap on city selector
 - [ ] Snap on place type selector
-- [ ] Check app runs on Android and iOS
+- [x] Check app runs on Android and iOS
 - [ ] Generate a production build
 - [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
 - [ ] Offline message
