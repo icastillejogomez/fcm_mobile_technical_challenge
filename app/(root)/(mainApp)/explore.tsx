@@ -8,7 +8,7 @@ import { usePlaces, usePlacesBottomSheetSharedValue, useThemePalette } from '@/h
 import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton } from '@/ui'
 import { PlacePrimitives } from '@/contexts/place/domain'
 
-const CitiesScreen: FC<PropsWithoutRef<object>> = () => {
+const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
   const { data: places, loading } = usePlaces()
 
   const { height } = Dimensions.get('window')
@@ -82,7 +82,7 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = () => {
   )
 }
 
-export default CitiesScreen
+export default ExploreScreen
 
 const styles = StyleSheet.create({
   container: {

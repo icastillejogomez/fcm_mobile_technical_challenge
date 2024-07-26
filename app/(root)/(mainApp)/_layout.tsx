@@ -33,7 +33,7 @@ export default function MainAppExpoRouterLayout() {
             position: 'relative',
           }}>
           <Tabs.Screen
-            name="places"
+            name="explore"
             options={{
               headerTitle: 'Explore',
               header: (props) => {
