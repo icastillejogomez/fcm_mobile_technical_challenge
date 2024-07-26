@@ -9,6 +9,16 @@ import { Image } from 'expo-image'
 
 const placeTypes = [
   {
+    label: 'Restaurants',
+    icon: require('../../assets/icons/dining-table.png'),
+    key: 'restaurant',
+  },
+  {
+    label: 'Monuments',
+    icon: require('../../assets/icons/church.png'),
+    key: 'monument',
+  },
+  {
     label: 'Beach',
     icon: require('../../assets/icons/beach.png'),
     key: 'beach',
@@ -17,11 +27,6 @@ const placeTypes = [
     label: 'Car rental',
     icon: require('../../assets/icons/car-rental.png'),
     key: 'car-rental',
-  },
-  {
-    label: 'Restaurants',
-    icon: require('../../assets/icons/dining-table.png'),
-    key: 'restaurant',
   },
   {
     label: 'Gas station',

@@ -929,6 +929,74 @@ exports[`When rendering the app should render the app 1`] = `
                               ]
                             }
                           >
+                            Restaurants
+                          </Text>
+                        </View>
+                        <View
+                          style={
+                            {
+                              "alignItems": "center",
+                              "gap": 4,
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <Image
+                            source={1}
+                            style={
+                              {
+                                "height": 28,
+                                "width": 28,
+                              }
+                            }
+                          />
+                          <Text
+                            style={
+                              [
+                                {
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                },
+                                {
+                                  "color": "#11181C",
+                                },
+                              ]
+                            }
+                          >
+                            Monuments
+                          </Text>
+                        </View>
+                        <View
+                          style={
+                            {
+                              "alignItems": "center",
+                              "gap": 4,
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <Image
+                            source={1}
+                            style={
+                              {
+                                "height": 28,
+                                "width": 28,
+                              }
+                            }
+                          />
+                          <Text
+                            style={
+                              [
+                                {
+                                  "fontSize": 11,
+                                  "fontWeight": "500",
+                                },
+                                {
+                                  "color": "#11181C",
+                                },
+                              ]
+                            }
+                          >
                             Beach
                           </Text>
                         </View>
@@ -964,40 +1032,6 @@ exports[`When rendering the app should render the app 1`] = `
                             }
                           >
                             Car rental
-                          </Text>
-                        </View>
-                        <View
-                          style={
-                            {
-                              "alignItems": "center",
-                              "gap": 4,
-                              "justifyContent": "center",
-                            }
-                          }
-                        >
-                          <Image
-                            source={1}
-                            style={
-                              {
-                                "height": 28,
-                                "width": 28,
-                              }
-                            }
-                          />
-                          <Text
-                            style={
-                              [
-                                {
-                                  "fontSize": 11,
-                                  "fontWeight": "500",
-                                },
-                                {
-                                  "color": "#11181C",
-                                },
-                              ]
-                            }
-                          >
-                            Restaurants
                           </Text>
                         </View>
                         <View
