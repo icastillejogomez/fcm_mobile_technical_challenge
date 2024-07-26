@@ -55,7 +55,8 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
         <MapView
           style={styles.map}
           initialRegion={appConfig.ui.map.iniitalRegion}
-          clusterColor={palette.background.primary}>
+          clusterColor={palette.background.primary}
+          clusterTextColor={palette.text.neutral}>
           {places &&
             places.map((place, index) => (
               <Marker
