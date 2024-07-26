@@ -1,10 +1,11 @@
-import { FC } from 'react'
-import { ScrollView, StyleSheet, View, Text } from 'react-native'
+import { FC, useCallback } from 'react'
+import { ScrollView, StyleSheet, View, Text, Alert } from 'react-native'
 import { BottomTabHeaderProps } from '@react-navigation/bottom-tabs'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useThemePalette, useThemeSpacing } from '@/hooks'
 import { SearchInput } from '../molecules'
 import { Image } from 'expo-image'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const placeTypes = [
   {
@@ -65,6 +66,10 @@ export const ExploreHeader: FC<BottomTabHeaderProps> = (props) => {
   const spacing = useThemeSpacing()
   const palette = useThemePalette()
 
+  const handlePress = useCallback((placeTypeKey: string) => {
+    Alert.alert('Functionality not implemented yet')
+  }, [])
+
   return (
     <View
       style={[
@@ -88,7 +93,11 @@ export const ExploreHeader: FC<BottomTabHeaderProps> = (props) => {
           horizontal
           showsHorizontalScrollIndicator={false}>
           {placeTypes.map((placeType, index) => (
-            <View key={index} style={styles.placeType}>
+            <TouchableOpacity
+              key={index}
+              style={styles.placeType}
+              activeOpacity={0.8}
+              onPress={() => handlePress(placeType.key)}>
               <Image
                 source={placeType.icon}
                 style={styles.placeTypeImage}
@@ -97,7 +106,7 @@ export const ExploreHeader: FC<BottomTabHeaderProps> = (props) => {
               <Text style={[styles.placeTypeText, { color: palette.text.default }]}>
                 {placeType.label}
               </Text>
-            </View>
+            </TouchableOpacity>
           ))}
         </ScrollView>
       </View>

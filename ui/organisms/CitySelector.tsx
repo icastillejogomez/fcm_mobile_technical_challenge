@@ -1,7 +1,8 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
-import React, { FC } from 'react'
+import { Alert, FlatList, StyleSheet, Text, View } from 'react-native'
+import React, { FC, useCallback } from 'react'
 import { CityCard } from '../molecules'
 import { useAllCities, useThemePalette } from '@/hooks'
+import { TouchableOpacity } from '@gorhom/bottom-sheet'
 
 type CitySelectorProps = {}
 
@@ -9,6 +10,10 @@ export const CitySelector: FC<CitySelectorProps> = () => {
   // Declare hooks
   const { data: cities } = useAllCities()
   const palette = useThemePalette()
+
+  const handlePress = useCallback((cityId: number) => {
+    Alert.alert('Functionality not implemented yet')
+  }, [])
 
   return (
     <View style={styles.container}>
@@ -19,7 +24,11 @@ export const CitySelector: FC<CitySelectorProps> = () => {
       <FlatList
         data={cities}
         contentContainerStyle={styles.list}
-        renderItem={({ item }) => <CityCard city={item} />}
+        renderItem={({ item }) => (
+          <TouchableOpacity activeOpacity={0.8} onPress={() => handlePress(item.id)}>
+            <CityCard city={item} />
+          </TouchableOpacity>
+        )}
         keyExtractor={(item) => item.id.toString()}
         horizontal
         showsHorizontalScrollIndicator={false}

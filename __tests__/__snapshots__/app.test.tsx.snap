@@ -690,356 +690,536 @@ exports[`When rendering the app should render the app 1`] = `
                                 }
                               >
                                 <View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={4}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Restaurants
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Restaurants
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={5}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Monuments
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Monuments
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={6}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Beach
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Beach
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={7}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Car rental
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Car rental
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={8}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Gas station
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Gas station
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={9}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Hospital
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Hospital
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={10}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Park
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Park
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={11}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Hotel
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Hotel
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={12}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Party
-                                    </Text>
-                                  </View>
-                                  <View
-                                    style={
-                                      {
-                                        "alignItems": "center",
-                                        "gap": 4,
-                                        "justifyContent": "center",
-                                      }
-                                    }
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Party
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
+                                  <RNGestureHandlerButton
+                                    collapsable={false}
+                                    delayLongPress={600}
+                                    enabled={true}
+                                    exclusive={true}
+                                    handlerTag={13}
+                                    handlerType="NativeViewGestureHandler"
+                                    onGestureEvent={[Function]}
+                                    onGestureHandlerEvent={[Function]}
+                                    onGestureHandlerStateChange={[Function]}
+                                    onHandlerStateChange={[Function]}
+                                    rippleColor={0}
+                                    touchSoundDisabled={false}
                                   >
-                                    <Image
-                                      source={1}
+                                    <View
+                                      accessible={true}
+                                      collapsable={false}
                                       style={
                                         {
-                                          "height": 28,
-                                          "width": 28,
+                                          "alignItems": "center",
+                                          "gap": 4,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
                                         }
                                       }
-                                      tintColor="#11181C"
-                                    />
-                                    <Text
-                                      style={
-                                        [
-                                          {
-                                            "fontSize": 11,
-                                            "fontWeight": "500",
-                                          },
-                                          {
-                                            "color": "#11181C",
-                                          },
-                                        ]
-                                      }
                                     >
-                                      Shopping
-                                    </Text>
-                                  </View>
+                                      <Image
+                                        source={1}
+                                        style={
+                                          {
+                                            "height": 28,
+                                            "width": 28,
+                                          }
+                                        }
+                                        tintColor="#11181C"
+                                      />
+                                      <Text
+                                        style={
+                                          [
+                                            {
+                                              "fontSize": 11,
+                                              "fontWeight": "500",
+                                            },
+                                            {
+                                              "color": "#11181C",
+                                            },
+                                          ]
+                                        }
+                                      >
+                                        Shopping
+                                      </Text>
+                                    </View>
+                                  </RNGestureHandlerButton>
                                 </View>
                               </RCTScrollView>
                             </View>
