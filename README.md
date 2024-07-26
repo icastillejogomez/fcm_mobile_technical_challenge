@@ -1,8 +1,5 @@
 # FCM Mobile Technical Challenge
 
-![til](./gif.gif)
-
-
 ## Challenge instructions
 
 <details>
