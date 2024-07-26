@@ -30,7 +30,7 @@ module.exports = {
       name: 'Berlin',
       nativeName: 'Berlin',
       currency: 'euro',
-      language: '',
+      language: 'de',
     },
     {
       id: 4,
