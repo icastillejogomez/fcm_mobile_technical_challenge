@@ -1,25 +1,5 @@
 # FCM Mobile Technical Challenge
 
-## Table of contents
-
-* [Table of contents](#table-of-contents)
-* [Challenge instructions](#challenge-instructions)
-* [How to run the app?](#how-to-run-the-app-)
-* [Git hooks](#git-hooks)
-  + [On commit](#on-commit)
-  + [On push](#on-push)
-* [Todo list](#todo-list)
-  + [Setting up the challenge](#setting-up-the-challenge)
-  + [Implementing the challenge](#implementing-the-challenge)
-  + [Finish the challenge](#finish-the-challenge)
-  + [Nice to implement](#nice-to-implement)
-* [Explanations about the challenge decisions](#explanations-about-the-challenge-decisions)
-  + [Why Expo?](#why-expo-)
-  + [Why native-components wrapping?](#why-native-components-wrapping-)
-  + [Why hexagonal architecture?](#why-hexagonal-architecture-)
-  + [Why "value objects"?](#why--value-objects--)
-
-
 ## Challenge instructions
 
 <details>
@@ -198,11 +178,11 @@ To github.com:icastillejogomez/fcm_mobile_technical_challenge.git
 
 ### Show map button
 
-TODO
+The "View map" button only works after the maps are visible al least one pixel.
 
 ### Android Safe Area View
 
-TODO
+In some android emulators the safe area view is not working properly.
 
 ## Todo list
 
@@ -231,134 +211,27 @@ TODO
 - [x] Pick a few icons and images for the app
 - [x] Define the models
 - [x] Code the contexts (domains and repositories)
-- [ ] Implement the UI MVP (and thinks next steps...)
-- [ ] Create i18n dictionaries and hooks
+- [x] Implement the UI MVP (and thinks next steps...)
 - [ ] Wrap native components
+- [ ] Splash screen
 
 ### Finish the challenge
 
-- [ ] Divide the Explore Header compontent into smaller components
-- [ ] Divide TabBar component into smaller components
 - [x] Improve the place type selector
-- [ ] Snap on city selector
-- [ ] Snap on place type selector
 - [x] Check app runs on Android and iOS
-- [ ] Generate a production build
 - [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
-- [ ] Offline message
-- [ ] Error snackbar
-- [ ] Check docs are updated
-- [ ] Finish Table of contents
 
 ### Nice to implement
 
+- [ ] Snap on city selector
+- [ ] Offline message
+- [ ] Divide the Explore Header compontent into smaller components
+- [ ] Divide TabBar component into smaller components
+- [ ] Snap on place type selector
+- [ ] Generate a production build
+- [ ] Error snackbar
+- [ ] Create i18n dictionaries and hooks
 - [ ] Deep linking
 - [x] Map view
 - [x] Animations
-- [ ] Splash screen
 - [ ] Code a few end-to-end tests
-
-## Explanations about the challenge decisions
-
-### Why Expo?
-
-<details>
-  <summary>Explanation</summary>
-  <br />
-  Expo is a React Native framework that allows you to build native iOS and Android apps using JavaScript and React. It is a great tool for building cross-platform apps and it is easy to use. It also has a lot of community support and a lot of plugins that can be used to extend the functionality of the framework. Eventhough in the past was a risky choice, nowadays is worth it. With Expo we can spend time on the business logic and what users want and not on the platform specifics.
-</details>
-
-### Why native-components wrapping?
-
-<details>
-  <summary>Explanation</summary>
-  <br />
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  <br />
-
-  ```typescript
-  import { Text, StyleSheet } from 'react-native'
-  import type { TextProps } from 'react-native'
-
-  export type FMCTextVariant = 'default' | 'inherit' | 'title' | 'caption'
-  export type FMCTextWeight = 'normal' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900'
-  export type FMCTextColor = 'default' | 'inherit' | 'primary' | 'secondary' | 'tertiary' | 'error' | 'warning' | 'success' | 'info'
-
-  export type FMCTextProps = TextProps & {
-    variant?: FMCTextVariant
-    weight?: FMCTextWeight
-    color?: FMCTextColor
-    size?: FMCTextSize
-  }
-
-  export const FMCText = (props: FMCTextProps) => {
-    const { variant = 'default', weight = 'normal', color = 'default', size = 'medium', ...rest } = props
-
-    return (
-      <Text
-        {...rest}
-        style={[
-          {
-            fontWeight: weight,
-            color: color,
-            fontSize: size,
-          },
-          rest.style,
-        ]}
-      />
-    )
-  }
-
-  const styles = StyleSheet.create({})
-  ```
-</details>
-
-### Why hexagonal architecture?
-
-<details>
-  <summary>Explanation</summary>
-  <br />
-  Hexagonal architecture is a software design pattern that helps to organize code into smaller, more manageable modules. It is based on the idea of dividing a system into discrete, independent modules that communicate with each other through well-defined interfaces. Each module has a clear responsibility and is responsible for a specific part of the system. This helps to keep the code modular and easier to understand and maintain.
-</details>
-
-### Why "value objects"?
-
-<details>
-  <summary>Explanation</summary>
-  <br />
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  ```typescript
-  class City {
-    ...
-    private readonly name: CityName // <-- Why CityName instead of simple string type?
-    ...
-
-
-    ...
-  }
-
-  class CityName extends StringValueObject {
-    constructor(name: string) {
-      super(name)
-      this.ensureCityNameIsNonEmpty()
-    }
-
-    private ensureCityNameIsNonEmpty(): void {
-      const value = this.getValue()
-      if (value.length === 0) {
-        throw new Error('City name cannot be empty')
-      }
-    }
-  }
-  ```
-</details>
-
-### How Splas screen works?
-
-<details>
-  <summary>Explanation</summary>
-  <br />
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</details>  
