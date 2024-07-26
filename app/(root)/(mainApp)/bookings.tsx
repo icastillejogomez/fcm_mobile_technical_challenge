@@ -1,11 +1,12 @@
-import { Text, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React from 'react'
 import { MainApplicationLayout } from '@/ui'
+import { FCMText } from '@/ui/native'
 
 const BookingsPage = () => {
   return (
     <MainApplicationLayout style={styles.container}>
-      <Text>BookingsPage</Text>
+      <FCMText>BookingsPage</FCMText>
     </MainApplicationLayout>
   )
 }

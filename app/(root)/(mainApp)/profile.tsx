@@ -1,11 +1,12 @@
 import React from 'react'
-import { Text, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { MainApplicationLayout } from '@/ui'
+import { FCMText } from '@/ui/native'
 
 const ProfileScreen = () => {
   return (
     <MainApplicationLayout style={styles.container}>
-      <Text>ProfileScreen</Text>
+      <FCMText>ProfileScreen</FCMText>
     </MainApplicationLayout>
   )
 }

@@ -513,7 +513,9 @@ exports[`When rendering the app should render the app 1`] = `
                                             "width": 56.25,
                                           },
                                           [
-                                            undefined,
+                                            {
+                                              "backgroundColor": "#687076",
+                                            },
                                           ],
                                         ]
                                       }
