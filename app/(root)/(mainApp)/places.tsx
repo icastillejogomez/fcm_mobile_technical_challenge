@@ -1,13 +1,16 @@
 import { StyleSheet, Text, View, Dimensions, Platform } from 'react-native'
 import React, { FC, PropsWithoutRef, useMemo, useRef } from 'react'
-import MapView from 'react-native-maps'
+import MapView, { Marker } from 'react-native-maps'
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import BottomSheet from '@gorhom/bottom-sheet'
-import { usePlacesBottomSheetSharedValue, useThemePalette } from '@/hooks'
+import BottomSheet, { BottomSheetVirtualizedList } from '@gorhom/bottom-sheet'
+import { usePlaces, usePlacesBottomSheetSharedValue, useThemePalette } from '@/hooks'
 import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton } from '@/ui'
+import { PlacePrimitives } from '@/contexts/place/domain'
 
-const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
+const CitiesScreen: FC<PropsWithoutRef<object>> = () => {
+  const { data: places, loading } = usePlaces()
+
   const { height } = Dimensions.get('window')
   const bottomSheetRef = useRef<BottomSheet>(null)
   const insets = useSafeAreaInsets()
@@ -32,7 +35,17 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
 
   return (
     <View style={styles.container}>
-      <MapView style={styles.map} />
+      <MapView style={styles.map}>
+        {places &&
+          places.map((place, index) => (
+            <Marker
+              key={index}
+              coordinate={{ latitude: place.coordinates[0], longitude: place.coordinates[1] }}
+              title={place.name}
+              description={place.name}
+            />
+          ))}
+      </MapView>
       <BottomSheet
         ref={bottomSheetRef}
         backgroundStyle={{ backgroundColor: palette.background.primary }}
@@ -45,18 +58,24 @@ const CitiesScreen: FC<PropsWithoutRef<object>> = (props) => {
         animatedPosition={animatedValue}>
         <View style={[styles.contentOnClose, { height: contentHeightOnClose }]}>
           <Text style={[styles.placesPlaceholder, { color: palette.text.default }]}>
-            180 places to see
+            {loading
+              ? 'Loading...'
+              : places
+                ? `${places.length} places to see`
+                : 'There was an error loading the places'}
           </Text>
         </View>
         <ExploreBottomSheetLayout>
-          {/* <BottomSheetSectionList
-            sections={sections}
-            keyExtractor={(i) => i}
-            contentContainerStyle={styles.sectionList}
-            renderSectionHeader={renderSectionHeader}
-            showsVerticalScrollIndicator={false}
-            renderItem={renderItem}
-          /> */}
+          {places && (
+            <BottomSheetVirtualizedList<PlacePrimitives>
+              data={places}
+              keyExtractor={(item) => item.name}
+              getItemCount={(data) => data.length}
+              getItem={(data, index) => data[index]}
+              renderItem={({ item }) => <Text>{item.name}</Text>}
+              // contentContainerStyle={styles.contentContainer}
+            />
+          )}
         </ExploreBottomSheetLayout>
       </BottomSheet>
     </View>

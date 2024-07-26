@@ -28,7 +28,4 @@ export class GraphqlCityRepository implements CityRepository {
 
     return data.data.allCities.map((city) => new City(city))
   }
-  public async save(city: City): Promise<void> {
-    throw new Error('Method not implemented.')
-  }
 }

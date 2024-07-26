@@ -8,26 +8,26 @@ import { it, describe } from '@jest/globals'
 import { SectionListProps } from 'react-native'
 
 jest.mock('@gorhom/bottom-sheet', () => {
-  const { SectionList } = jest.requireActual('react-native')
+  const { VirtualizedList } = jest.requireActual('react-native')
 
-  const BottomSheetSectionList: FC<PropsWithChildren<SectionListProps<any>>> = ({
+  const BottomSheetVirtualizedList: FC<PropsWithChildren<SectionListProps<any>>> = ({
     children,
     ...otherProps
   }) => {
     return (
-      <SectionList testID="mocked-flatlist" {...otherProps}>
+      <VirtualizedList testID="mocked-flatlist" {...otherProps}>
         {children}
-      </SectionList>
+      </VirtualizedList>
     )
   }
 
   const module = jest.requireActual('@gorhom/bottom-sheet')
-  module.BottomSheetSectionList = SectionList
+  module.BottomSheetVirtualizedList = VirtualizedList
 
   return {
     ...module,
     __esModule: true,
-    BottomSheetSectionList,
+    BottomSheetVirtualizedList,
   }
 })
 
@@ -43,7 +43,7 @@ describe('When rendering the app', () => {
     const app = renderRouter()
 
     expect(screen).toHavePathname('/places')
-    app.getByText('180 places to see')
+    app.getByText('Where to?')
     expect(screen).toMatchSnapshot()
   })
 })

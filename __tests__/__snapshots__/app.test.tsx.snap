@@ -327,7 +327,7 @@ exports[`When rendering the app should render the app 1`] = `
                                           ]
                                         }
                                       >
-                                        180 places to see
+                                        Loading...
                                       </Text>
                                     </View>
                                     <View
@@ -346,7 +346,27 @@ exports[`When rendering the app should render the app 1`] = `
                                           },
                                         ]
                                       }
-                                    />
+                                    >
+                                      <RCTScrollView
+                                        data={[]}
+                                        getItem={[Function]}
+                                        getItemCount={[Function]}
+                                        keyExtractor={[Function]}
+                                        onContentSizeChange={[Function]}
+                                        onLayout={[Function]}
+                                        onMomentumScrollBegin={[Function]}
+                                        onMomentumScrollEnd={[Function]}
+                                        onScroll={[Function]}
+                                        onScrollBeginDrag={[Function]}
+                                        onScrollEndDrag={[Function]}
+                                        renderItem={[Function]}
+                                        scrollEventThrottle={0.0001}
+                                        stickyHeaderIndices={[]}
+                                        testID="mocked-flatlist"
+                                      >
+                                        <View />
+                                      </RCTScrollView>
+                                    </View>
                                     <View
                                       onLayout={[Function]}
                                       pointerEvents="box-none"
