@@ -240,6 +240,8 @@ TODO
 - [ ] Divide the Explore Header compontent into smaller components
 - [ ] Divide TabBar component into smaller components
 - [ ] Improve the place type selector
+- [ ] Snap on city selector
+- [ ] Snap on place type selector
 - [ ] Check app runs on Android and iOS
 - [ ] Generate a production build
 - [ ] CD: Create a release pipeline based on [Semver Versioning](https://semver.org/) tags.
