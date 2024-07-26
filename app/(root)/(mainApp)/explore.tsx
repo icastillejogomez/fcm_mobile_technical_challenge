@@ -1,20 +1,29 @@
 import { StyleSheet, Text, View, Dimensions, Platform } from 'react-native'
 import React, { FC, PropsWithoutRef, useMemo, useRef } from 'react'
-import MapView, { Marker } from 'react-native-maps'
+import MapView from 'react-native-map-clustering'
+import { Marker } from 'react-native-maps'
+import Animated from 'react-native-reanimated'
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import BottomSheet, { BottomSheetVirtualizedList } from '@gorhom/bottom-sheet'
-import { usePlaces, usePlacesBottomSheetSharedValue, useThemePalette } from '@/hooks'
+import {
+  usePlaces,
+  usePlacesBottomSheetSharedValue,
+  useTabBarHeight,
+  useThemePalette,
+} from '@/hooks'
 import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton, MapMarker } from '@/ui'
 import { PlacePrimitives } from '@/contexts/place/domain'
 import PlaceCard from '@/ui/molecules/PlaceCard'
 import { Link } from 'expo-router'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import { appConfig } from '@/constants'
 
 const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
   const { data: places, loading } = usePlaces()
 
   const { height } = Dimensions.get('window')
+  const tabBarHeight = useTabBarHeight()
   const bottomSheetRef = useRef<BottomSheet>(null)
   const insets = useSafeAreaInsets()
   const palette = useThemePalette()
@@ -38,18 +47,23 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
 
   return (
     <View style={styles.container}>
-      <MapView style={styles.map}>
-        {places &&
-          places.map((place, index) => (
-            <Marker
-              key={index}
-              coordinate={{ latitude: place.coordinates[0], longitude: place.coordinates[1] }}
-              title={place.name}
-              description={place.name}>
-              <MapMarker type={place.type} />
-            </Marker>
-          ))}
-      </MapView>
+      <Animated.View style={{ marginBottom: tabBarHeight }}>
+        <MapView
+          style={styles.map}
+          initialRegion={appConfig.ui.map.iniitalRegion}
+          clusterColor={palette.background.primary}>
+          {places &&
+            places.map((place, index) => (
+              <Marker
+                key={index}
+                coordinate={{ latitude: place.coordinates[0], longitude: place.coordinates[1] }}
+                title={place.name}
+                description={place.name}>
+                <MapMarker type={place.type} />
+              </Marker>
+            ))}
+        </MapView>
+      </Animated.View>
       <BottomSheet
         ref={bottomSheetRef}
         backgroundStyle={{ backgroundColor: palette.background.primary }}
