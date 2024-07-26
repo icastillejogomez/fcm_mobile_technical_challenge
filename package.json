@@ -22,7 +22,7 @@
     "clean:expo": "rm -fr .expo",
     "clean:android": "rm -fr android/build && pushd android && ./gradlew clean; popd",
     "clean:deps": "rm -fr node_modules; npm install",
-    "graphql": "json-graphql-server db.js",
+    "graphql": "json-graphql-server db.js --h 0.0.0.0 --p 3000 ",
     "prepare": "husky"
   },
   "dependencies": {

@@ -4,7 +4,6 @@ import { BottomTabHeaderProps } from '@react-navigation/bottom-tabs'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useThemePalette, useThemeSpacing } from '@/hooks'
 import { SearchInput } from '../molecules'
-import { SearchFilterButton } from '../atoms'
 import { Image } from 'expo-image'
 
 const placeTypes = [
@@ -78,7 +77,6 @@ export const ExploreHeader: FC<BottomTabHeaderProps> = (props) => {
       ]}>
       <View style={[styles.searchContainer, { paddingHorizontal: spacing.appHorizontalPadding }]}>
         <SearchInput />
-        <SearchFilterButton />
       </View>
       <View style={styles.placeTypesSelectorContainer}>
         <ScrollView

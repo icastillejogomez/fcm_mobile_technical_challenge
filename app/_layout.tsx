@@ -7,24 +7,27 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { StatusBar } from 'expo-status-bar'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { populateKernel } from '@/constants'
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync()
 
 type ReadyState = {
   fontsLoaded: boolean
+  kernelInitialized: boolean
 }
 
 const initialReadyState: ReadyState = {
   fontsLoaded: false,
+  kernelInitialized: false,
 }
 
 function isAppReady(readyState: ReadyState): boolean {
-  return readyState.fontsLoaded
+  return readyState.fontsLoaded && readyState.kernelInitialized
 }
 
 const apolloClient = new ApolloClient({
-  uri: 'http://localhost:3000/',
+  uri: 'http://10.4.0.2:3000/',
   cache: new InMemoryCache(),
 })
 
@@ -49,7 +52,12 @@ const FCMTravelGuideAppLayout = () => {
     loadFonts().finally(() => {
       setReadyState((prev) => ({ ...prev, fontsLoaded: true }))
     })
-  }, [loadFonts])
+  }, [loadFonts, setReadyState])
+
+  useEffect(() => {
+    populateKernel({ apolloClient })
+    setReadyState((prev) => ({ ...prev, kernelInitialized: true }))
+  }, [setReadyState])
 
   const Wrappers: FC<PropsWithChildren> = (props) => {
     return (

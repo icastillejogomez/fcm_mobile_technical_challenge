@@ -42,7 +42,7 @@ export default function MainAppExpoRouterLayout() {
               tabBarIcon: ({ color, size }) => {
                 return (
                   <Image
-                    source={require('../../assets/icons/search.png')}
+                    source={require('../../../assets/icons/search.png')}
                     style={{ width: size, height: size }}
                     tintColor={color}
                   />
@@ -57,7 +57,7 @@ export default function MainAppExpoRouterLayout() {
               tabBarIcon: ({ color, size, focused }) => {
                 return (
                   <Image
-                    source={require('../../assets/icons/heart.png')}
+                    source={require('../../../assets/icons/heart.png')}
                     style={{ width: size, height: size }}
                     tintColor={color}
                   />
@@ -76,7 +76,7 @@ export default function MainAppExpoRouterLayout() {
               tabBarIcon: ({ color, size, focused }) => {
                 return (
                   <Image
-                    source={require('../../assets/icons/bookings.png')}
+                    source={require('../../../assets/icons/bookings.png')}
                     style={{ width: size, height: size }}
                     tintColor={color}
                   />
@@ -95,7 +95,7 @@ export default function MainAppExpoRouterLayout() {
               tabBarIcon: ({ color, size, focused }) => {
                 return (
                   <Image
-                    source={require('../../assets/icons/messages.png')}
+                    source={require('../../../assets/icons/messages.png')}
                     style={{ width: size, height: size }}
                     tintColor={color}
                   />
@@ -114,7 +114,7 @@ export default function MainAppExpoRouterLayout() {
               tabBarIcon: ({ color, size, focused }) => {
                 return (
                   <Image
-                    source={require('../../assets/icons/profile.png')}
+                    source={require('../../../assets/icons/profile.png')}
                     style={{ width: size, height: size }}
                     tintColor={color}
                   />

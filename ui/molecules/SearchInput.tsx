@@ -1,7 +1,8 @@
-import { FC, useCallback } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native'
+import { FC } from 'react'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { useThemePalette } from '@/hooks'
 import { Image } from 'expo-image'
+import { Link } from 'expo-router'
 
 type SearchInputProps = {}
 
@@ -9,24 +10,22 @@ export const SearchInput: FC<SearchInputProps> = () => {
   // Declare hooks
   const palette = useThemePalette()
 
-  const handlePress = useCallback(() => {
-    Alert.alert('Feature not implemented yet')
-  }, [])
-
   return (
-    <TouchableOpacity style={styles.container} onPress={handlePress}>
-      <View style={styles.iconWrapper}>
-        <Image
-          source={require('../../assets/icons/search.png')}
-          style={styles.icon}
-          tintColor={palette.text.default}
-        />
-      </View>
-      <View style={styles.content}>
-        <Text style={[styles.placeholder, { color: palette.text.default }]}>Where to?</Text>
-        <Text style={[styles.caption, { color: palette.text.neutral }]}>Anywhere · Any week</Text>
-      </View>
-    </TouchableOpacity>
+    <Link href="/search" asChild>
+      <TouchableOpacity style={styles.container}>
+        <View style={styles.iconWrapper}>
+          <Image
+            source={require('../../assets/icons/search.png')}
+            style={styles.icon}
+            tintColor={palette.text.default}
+          />
+        </View>
+        <View style={styles.content}>
+          <Text style={[styles.placeholder, { color: palette.text.default }]}>Where to?</Text>
+          <Text style={[styles.caption, { color: palette.text.neutral }]}>Anywhere · Any week</Text>
+        </View>
+      </TouchableOpacity>
+    </Link>
   )
 }
 

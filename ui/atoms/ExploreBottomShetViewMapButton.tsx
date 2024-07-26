@@ -36,7 +36,7 @@ export const ExploreBottomShetViewMapButton: FC<ExploreBottomShetViewMapButtonPr
             styles.button,
             {
               backgroundColor: palette.background.header,
-              shadowColor: 'black',
+              shadowColor: '#000',
               shadowOffset: { width: 0, height: 2 },
               shadowOpacity: 0.25,
               shadowRadius: 4,
