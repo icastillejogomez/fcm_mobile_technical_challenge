@@ -109,6 +109,8 @@ npm run ios
 npm run android
 ```
 
+In case you want to run the app in an Android emulator without Expo (using `npm run android` command), you need to install the Google Maps API in the AndroidManifest.xml file.
+
 ## Git hooks
 
 ### On commit
