@@ -1,5 +1,5 @@
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client'
-import { GetAllCities } from '@/contexts/city/application'
+import { GetAllCities, GetCityByKey } from '@/contexts/city/application'
 import { CityRepository } from '@/contexts/city/domain'
 import { GraphqlCityRepository } from '@/contexts/city/infrastructure'
 import { PlaceRepository } from '@/contexts/place/domain'
@@ -13,6 +13,7 @@ export type Kernel = {
   }
   useCases: {
     getAllCities: GetAllCities
+    getCityByKey: GetCityByKey
     getAllPlaces: GetAllPlaces
   }
 }
@@ -28,6 +29,7 @@ export function populateKernel({ apolloClient }: PopulateKernelParams): void {
   const placeRepository = new GraphqlPlaceRepository(apolloClient)
 
   const getAllCities = new GetAllCities(cityRepository)
+  const getCityByKey = new GetCityByKey(cityRepository)
   const getAllPlaces = new GetAllPlaces(placeRepository)
 
   kernel = {
@@ -37,6 +39,7 @@ export function populateKernel({ apolloClient }: PopulateKernelParams): void {
     },
     useCases: {
       getAllCities,
+      getCityByKey,
       getAllPlaces,
     },
   }

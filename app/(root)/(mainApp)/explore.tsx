@@ -7,6 +7,7 @@ import BottomSheet, { BottomSheetVirtualizedList } from '@gorhom/bottom-sheet'
 import { usePlaces, usePlacesBottomSheetSharedValue, useThemePalette } from '@/hooks'
 import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton } from '@/ui'
 import { PlacePrimitives } from '@/contexts/place/domain'
+import PlaceCard from '@/ui/molecules/PlaceCard'
 
 const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
   const { data: places, loading } = usePlaces()
@@ -72,8 +73,9 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
               keyExtractor={(item) => item.name}
               getItemCount={(data) => data.length}
               getItem={(data, index) => data[index]}
-              renderItem={({ item }) => <Text>{item.name}</Text>}
-              // contentContainerStyle={styles.contentContainer}
+              renderItem={({ item }) => <PlaceCard place={item} />}
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={styles.list}
             />
           )}
         </ExploreBottomSheetLayout>
@@ -100,7 +102,9 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginTop: 8,
   },
-  sectionList: {
+  list: {
+    gap: 32,
+    marginTop: 16,
     paddingBottom: 100,
   },
 })

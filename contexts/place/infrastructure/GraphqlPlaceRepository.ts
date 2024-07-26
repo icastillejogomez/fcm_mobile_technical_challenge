@@ -35,6 +35,7 @@ export class GraphqlPlaceRepository implements PlaceRepository {
       (primitives) =>
         new Place({
           cityKey: primitives.key,
+          type: primitives.place.type,
           name: primitives.place.name,
           coordinates: primitives.place.coordinates,
         }),

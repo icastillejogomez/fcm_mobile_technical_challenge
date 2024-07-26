@@ -337,8 +337,8 @@ exports[`When rendering the app should render the app 1`] = `
                                             "flexGrow": 1,
                                           },
                                           {
-                                            "paddingLeft": 12,
-                                            "paddingRight": 12,
+                                            "paddingLeft": 24,
+                                            "paddingRight": 24,
                                             "paddingTop": 16,
                                           },
                                           {
@@ -348,6 +348,13 @@ exports[`When rendering the app should render the app 1`] = `
                                       }
                                     >
                                       <RCTScrollView
+                                        contentContainerStyle={
+                                          {
+                                            "gap": 32,
+                                            "marginTop": 16,
+                                            "paddingBottom": 100,
+                                          }
+                                        }
                                         data={[]}
                                         getItem={[Function]}
                                         getItemCount={[Function]}
@@ -361,6 +368,7 @@ exports[`When rendering the app should render the app 1`] = `
                                         onScrollEndDrag={[Function]}
                                         renderItem={[Function]}
                                         scrollEventThrottle={0.0001}
+                                        showsVerticalScrollIndicator={false}
                                         stickyHeaderIndices={[]}
                                         testID="mocked-flatlist"
                                       >

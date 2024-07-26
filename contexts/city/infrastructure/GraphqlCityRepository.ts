@@ -28,4 +28,9 @@ export class GraphqlCityRepository implements CityRepository {
 
     return data.data.allCities.map((city) => new City(city))
   }
+
+  public async find(cityKey: string): Promise<City | null> {
+    const allCities = await this.getAll()
+    return allCities.find((city) => city.getKey() === cityKey) ?? null
+  }
 }
