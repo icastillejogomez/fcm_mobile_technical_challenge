@@ -8,6 +8,8 @@ import { usePlaces, usePlacesBottomSheetSharedValue, useThemePalette } from '@/h
 import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton } from '@/ui'
 import { PlacePrimitives } from '@/contexts/place/domain'
 import PlaceCard from '@/ui/molecules/PlaceCard'
+import { Link } from 'expo-router'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
   const { data: places, loading } = usePlaces()
@@ -74,7 +76,13 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
               keyExtractor={(item) => item.name}
               getItemCount={(data) => data.length}
               getItem={(data, index) => data[index]}
-              renderItem={({ item }) => <PlaceCard place={item} />}
+              renderItem={({ item }) => (
+                <Link href={`/place/${item.name}`} asChild>
+                  <TouchableOpacity activeOpacity={1}>
+                    <PlaceCard place={item} />
+                  </TouchableOpacity>
+                </Link>
+              )}
               showsVerticalScrollIndicator={false}
               contentContainerStyle={styles.list}
             />

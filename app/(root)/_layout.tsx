@@ -18,6 +18,15 @@ export default function ModalLayout() {
           presentation: 'modal',
         }}
       />
+      <Stack.Screen
+        name="place/[name]"
+        options={{
+          headerBackTitle: 'Explore',
+          headerStyle: { backgroundColor: palette.background.header },
+          headerTitleStyle: { color: palette.text.default },
+          headerShown: true,
+        }}
+      />
     </Stack>
   )
 }
