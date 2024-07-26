@@ -56,6 +56,7 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
         bottomInset={0}
         footerComponent={ExploreBottomShetViewMapButton}
         animateOnMount={false}
+        handleIndicatorStyle={{ backgroundColor: palette.text.neutral }}
         animatedPosition={animatedValue}>
         <View style={[styles.contentOnClose, { height: contentHeightOnClose }]}>
           <Text style={[styles.placesPlaceholder, { color: palette.text.default }]}>
