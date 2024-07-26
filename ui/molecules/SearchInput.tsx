@@ -15,7 +15,7 @@ export const SearchInput: FC<SearchInputProps> = () => {
       <TouchableOpacity style={styles.container}>
         <View style={styles.iconWrapper}>
           <Image
-            source={require('../../assets/icons/search.png')}
+            source={require('../../assets/icons/search.svg')}
             style={styles.icon}
             tintColor={palette.text.default}
           />

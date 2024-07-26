@@ -9,52 +9,52 @@ import { Image } from 'expo-image'
 const placeTypes = [
   {
     label: 'Restaurants',
-    icon: require('../../assets/icons/dining-table.png'),
+    icon: require('../../assets/icons/dining-table.svg'),
     key: 'restaurant',
   },
   {
     label: 'Monuments',
-    icon: require('../../assets/icons/church.png'),
+    icon: require('../../assets/icons/monument.svg'),
     key: 'monument',
   },
   {
     label: 'Beach',
-    icon: require('../../assets/icons/beach.png'),
+    icon: require('../../assets/icons/beach.svg'),
     key: 'beach',
   },
   {
     label: 'Car rental',
-    icon: require('../../assets/icons/car-rental.png'),
+    icon: require('../../assets/icons/car-rental.svg'),
     key: 'car-rental',
   },
   {
     label: 'Gas station',
-    icon: require('../../assets/icons/gas-station.png'),
+    icon: require('../../assets/icons/gas-station.svg'),
     key: 'gas-station',
   },
   {
     label: 'Hospital',
-    icon: require('../../assets/icons/hospital.png'),
+    icon: require('../../assets/icons/hospital.svg'),
     key: 'hospital',
   },
   {
     label: 'Park',
-    icon: require('../../assets/icons/park.png'),
+    icon: require('../../assets/icons/park.svg'),
     key: 'park',
   },
   {
     label: 'Hotel',
-    icon: require('../../assets/icons/hotel.png'),
+    icon: require('../../assets/icons/hotel.svg'),
     key: 'hotel',
   },
   {
     label: 'Party',
-    icon: require('../../assets/icons/party.png'),
+    icon: require('../../assets/icons/party.svg'),
     key: 'party',
   },
   {
     label: 'Shopping',
-    icon: require('../../assets/icons/shopping-bag.png'),
+    icon: require('../../assets/icons/shopping-bag.svg'),
     key: 'shopping-bag',
   },
 ]
@@ -89,7 +89,11 @@ export const ExploreHeader: FC<BottomTabHeaderProps> = (props) => {
           showsHorizontalScrollIndicator={false}>
           {placeTypes.map((placeType, index) => (
             <View key={index} style={styles.placeType}>
-              <Image source={placeType.icon} style={styles.placeTypeImage} />
+              <Image
+                source={placeType.icon}
+                style={styles.placeTypeImage}
+                tintColor={palette.text.default}
+              />
               <Text style={[styles.placeTypeText, { color: palette.text.default }]}>
                 {placeType.label}
               </Text>

@@ -43,7 +43,11 @@ export const ExploreBottomShetViewMapButton: FC<ExploreBottomShetViewMapButtonPr
             },
           ]}>
           <Text style={[styles.caption, { color: palette.text.default }]}>View map</Text>
-          <Image source={require('../../assets/icons/map.png')} style={styles.icon} />
+          <Image
+            source={require('../../assets/icons/map.svg')}
+            tintColor={palette.text.default}
+            style={styles.icon}
+          />
         </TouchableOpacity>
       </Animated.View>
     </BottomSheetFooter>
