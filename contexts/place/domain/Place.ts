@@ -1,6 +1,7 @@
 import { AggregateRoot } from '@/contexts/shared/domain'
 import { PlacePrimitives } from './PlacePrimitives'
 import { PlaceCityKey, PlaceName, PlaceCoordinates, PlaceType } from './value-objects'
+import type { PlaceType as PlaceTypeType } from '@/types'
 
 export class Place implements AggregateRoot<PlacePrimitives> {
   private readonly cityKey: PlaceCityKey
@@ -20,8 +21,8 @@ export class Place implements AggregateRoot<PlacePrimitives> {
     return this.cityKey.getValue()
   }
 
-  public getType(): string {
-    return this.type.getValue()
+  public getType(): PlaceTypeType {
+    return this.type.getValue() as PlaceTypeType
   }
 
   public getName(): string {
@@ -35,7 +36,7 @@ export class Place implements AggregateRoot<PlacePrimitives> {
   public toPrimitives(): PlacePrimitives {
     return {
       cityKey: this.cityKey.getValue(),
-      type: this.type.getValue(),
+      type: this.type.getValue() as PlaceTypeType,
       name: this.name.getValue(),
       coordinates: this.coordinates.getValue(),
     }

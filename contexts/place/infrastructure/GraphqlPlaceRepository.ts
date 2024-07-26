@@ -1,11 +1,12 @@
 import type { ApolloClient, NormalizedCacheObject } from '@apollo/client'
 import { gql } from '@apollo/client'
 import { Place, PlaceRepository } from '../domain'
+import { PlaceType } from '@/types'
 
 type GrapqlPlacePrimitives = {
   key: string
   place: {
-    type: string
+    type: PlaceType
     name: string
     coordinates: [number, number]
   }

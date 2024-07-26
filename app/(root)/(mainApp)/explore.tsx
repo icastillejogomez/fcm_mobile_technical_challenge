@@ -5,7 +5,7 @@ import MapView, { Marker } from 'react-native-maps'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import BottomSheet, { BottomSheetVirtualizedList } from '@gorhom/bottom-sheet'
 import { usePlaces, usePlacesBottomSheetSharedValue, useThemePalette } from '@/hooks'
-import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton } from '@/ui'
+import { ExploreBottomSheetLayout, ExploreBottomShetViewMapButton, MapMarker } from '@/ui'
 import { PlacePrimitives } from '@/contexts/place/domain'
 import PlaceCard from '@/ui/molecules/PlaceCard'
 import { Link } from 'expo-router'
@@ -45,8 +45,9 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
               key={index}
               coordinate={{ latitude: place.coordinates[0], longitude: place.coordinates[1] }}
               title={place.name}
-              description={place.name}
-            />
+              description={place.name}>
+              <MapMarker type={place.type} />
+            </Marker>
           ))}
       </MapView>
       <BottomSheet
