@@ -27,7 +27,7 @@ function isAppReady(readyState: ReadyState): boolean {
 }
 
 const apolloClient = new ApolloClient({
-  uri: 'http://10.4.0.2:3000/',
+  uri: 'http://127.0.0.1:3000/',
   cache: new InMemoryCache(),
 })
 
