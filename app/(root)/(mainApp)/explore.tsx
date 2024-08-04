@@ -46,7 +46,10 @@ const ExploreScreen: FC<PropsWithoutRef<object>> = () => {
   const animatedValue = usePlacesBottomSheetSharedValue()
 
   const handlePress = useCallback((place: PlacePrimitives) => {
-    router.navigate(`place/${place.name}`)
+    router.navigate({
+      pathname: '/place/[name]',
+      params: { name: place.name },
+    })
   }, [])
 
   return (
